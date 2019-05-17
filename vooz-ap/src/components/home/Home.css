@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+.logo{
+  width: 70%
+}
+
+.btn-home{
+  border: 1px solid black;
+  font-size: 1.3em;
+  padding:10px 30px;
+  font-family: Roboto;
+  background-color: white;
+}
+button:hover{
+  background-color: black;
+  color:white;  
+}
+
+h1{
+  font-family: Roboto;
+  font-weight: lighter;
+}
