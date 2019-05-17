@@ -2,22 +2,32 @@
 
 
 .logo{
-  width: 70%
+  width: 55%;
+  margin-top:30%;
+}
+
+.link-home {
+  text-decoration: none;
+  font-family: Roboto;
+  color: black;
 }
 
 .btn-home{
-  border: 1px solid black;
+  border: 1.5px solid black;
   font-size: 1.3em;
   padding:10px 30px;
-  font-family: Roboto;
+  margin-top:7%;
   background-color: white;
+  text-decoration: none;
 }
 button:hover{
   background-color: black;
   color:white;  
 }
 
-h1{
+.slogan{
   font-family: Roboto;
   font-weight: lighter;
+  font-size: 1.6em;
+  margin-top:30%; 
 }

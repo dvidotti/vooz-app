@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from '../navbar/NavBar'
-import logo from '../../img/VoOZ_logo.png'
+import logo from '../../img/Logo Big.png'
 import './Home.css'
 import { Link } from 'react-router-dom'
 
@@ -9,8 +9,8 @@ const Home = () => {
     <div>
     <NavBar />
     <img className="logo" src={logo} alt="vooz" />
-    <h1>Descubra a sua voz</h1>
-    <button className="btn-home"><Link to="/test">Faça o teste</Link></button>
+    <h1 className="slogan">Descubra a sua voz</h1>
+    <button className="btn-home"><Link className="link-home" to="/play1">Faça o teste</Link></button>
     </div>
   )
 }
