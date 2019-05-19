@@ -1,0 +1,19 @@
+.full-page{
+  background-color: black;
+  color: white;
+}
+
+
+.box-question{
+  font-weight: 100;
+  font-size: 1.8em;
+  margin-left:5%;
+  margin-right:5%;
+  margin-top:15%; 
+  padding-top:8%;
+  padding-bottom:8%;
+}
+
+.box-answer{
+  color: white;
+}

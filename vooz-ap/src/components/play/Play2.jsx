@@ -7,7 +7,6 @@ import axios from 'axios'
 import next from '../../img/Next.png'
 import Sound from 'react-sound'
 import { Link } from 'react-router-dom'
-// import backgroundPlay from'../../img/fone_vooz-01.png'
 
 class Play2 extends Component {
   constructor(props) {
@@ -19,9 +18,9 @@ class Play2 extends Component {
   }
   
   getAudio() {
-    axios.get("http://localhost:5000/api/my-audios?audio_two")
+    axios.get("http://localhost:5000/api/my-audios")
     .then(resAudio =>{
-      const theAudio = resAudio.data[0].audio_one
+      const theAudio = resAudio.data[0].audio_two;
       this.setState({audio: theAudio});
 
     })
@@ -34,8 +33,7 @@ class Play2 extends Component {
     return (
       <div>
         <NavBar />
-        <h1>Escute, depois cante.</h1>
-        <h1>Repita a melodia</h1>
+        <h1 className="text">Cante esta melodia<br/>também.</h1>
         <Sound
           url={this.state.audio}
           playStatus={Sound.status.PLAYING}
@@ -45,7 +43,9 @@ class Play2 extends Component {
          // onFinishedPlaying={this.handleSongFinishedPlaying}
           />
         <button onClick={this.getAudio}className="btn-play"><img src={play} alt="play"/></button>
+        <div className="next">
         <Link to='/q2'><img src={next} alt="next"/></Link>
+        </div>
         <Footer />
       </div>
     )

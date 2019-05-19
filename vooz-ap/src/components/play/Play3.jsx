@@ -18,9 +18,10 @@ class Play3 extends Component {
   }
   
   getAudio() {
-    axios.get("http://localhost:5000/api/my-audios?audio_three")
+    axios.get("http://localhost:5000/api/my-audios")
     .then(resAudio =>{
-      const theAudio = resAudio.data[0].audio_one
+      const theAudio = resAudio.data[0].audio_three;
+
       this.setState({audio: theAudio});
 
     })
@@ -33,8 +34,7 @@ class Play3 extends Component {
     return (
       <div>
         <NavBar />
-        <h1>Escute, depois cante.</h1>
-        <h1>Repita a melodia</h1>
+        <h1 className="text">Cante esta melodia<br/>também.</h1>
         <Sound
           url={this.state.audio}
           playStatus={Sound.status.PLAYING}
@@ -44,7 +44,9 @@ class Play3 extends Component {
          // onFinishedPlaying={this.handleSongFinishedPlaying}
           />
         <button onClick={this.getAudio}className="btn-play"><img src={play} alt="play"/></button>
-        <Link to='/q3'><img src={next} alt="next"/></Link>
+        <div className="next">
+        <Link  to='/q3'><img  src={next} alt="next"/></Link>
+        </div>
         <Footer />
       </div>
     )

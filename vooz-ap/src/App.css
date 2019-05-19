@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+*{
+  font-family:Roboto;
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }

@@ -11,7 +11,7 @@ class Q2 extends Component {
     render() {
       return(
         <div>
-          <FormTwo label='Cante esta melodia também?' input1='Fácil' input2='Difícil' option1='/q4' option2='/q4'/>
+          <FormTwo label='E agora como foi?' input1='Fácil' input2='Difícil' option1='/q4' option2='/q4'/>
         </div>
       )
     }

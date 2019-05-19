@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import NavBar from '../../navbar/NavBar'
+import Footer from '../../footer/Footer'
+
+import './FormTwo.css'
+
 
 class FormTwo extends Component {
   constructor(props) {
@@ -25,7 +30,6 @@ class FormTwo extends Component {
   }
 
   render() {
-    console.log(this.props)
     if(this.state.isSelect1) {
       return <Redirect to={this.props.option1} /> 
     } if(this.state.isSelect2) {
@@ -33,9 +37,13 @@ class FormTwo extends Component {
       }
     return(
       <div>
-        <h1>{this.props.label}</h1>
-        <button onClick={this.statusSelect1}>{this.props.input1}</button> 
-        <button onClick={this.statusSelect2}>{this.props.input2}</button> 
+        <NavBar />
+        <h1 className='question'>{this.props.label}</h1>
+        <div className='answer-box'>
+          <button className='answer1' onClick={this.statusSelect1}>{this.props.input1}</button> 
+          <button className='answer2'  onClick={this.statusSelect2}>{this.props.input2}</button> 
+        </div>
+        <Footer />  
       </div>
     )
   }

@@ -16,6 +16,8 @@ class Play1 extends Component {
     }
     this.getAudio = this.getAudio.bind(this);
   }
+
+  
   
   getAudio() {
     axios.get("http://localhost:5000/api/my-audios?audio_one")
@@ -34,7 +36,7 @@ class Play1 extends Component {
       <div>
         <NavBar />
         <h1 className="text">Escute, depois cante.<br/>Repita a melodia</h1>
-      
+        {/* <button onClick={this.innerRef}>ClickMe</button> */}
         <Sound
           url={this.state.audio}
           playStatus={Sound.status.PLAYING}
@@ -45,7 +47,10 @@ class Play1 extends Component {
           />
         <button onClick={this.getAudio}className="btn-play"><img src={play} alt="play"/></button>
         <div className="next">
-        <Link  to='/q1'><img  src={next} alt="next"/></Link>
+        <Link  to={{ 
+          pathname:'/q1',
+          state: this.props.location.state
+        }}><img  src={next} alt="next"/></Link>
         </div>
         <Footer />
       </div>

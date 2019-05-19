@@ -7,6 +7,7 @@ import Play4 from './components/play/Play4'
 import Q1 from './components/questions/Q1'
 import Q2 from './components/questions/Q2'
 import Q3 from './components/questions/Q3'
+import FormFour from './components/forms/form-four/FormFour'
 import { Switch, Route } from 'react-router-dom'
 import './App.css';
 
@@ -23,6 +24,7 @@ class App extends Component {
             <Route path='/q1' component={Q1} />
             <Route path='/q2' component={Q2} />
             <Route path='/q3' component={Q3} />
+            <Route path='/formfour' component={FormFour} />
           </Switch>
       </div>
     );
