@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import FormFour from '../forms/form-four/FormFour'
-import './Q.css'
+import '../play/Play.css'
 import legend9 from '../../img/Legenda 9 Mobile.svg'
 import FooterWhite from '../footer/FooterWhite'
 
@@ -9,13 +9,38 @@ import FooterWhite from '../footer/FooterWhite'
 class Q4 extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      style: ''
+    }
+    this.getAnswerFour = this.getAnswerFour.bind(this);
+  }
+
+  getAnswerFour(value){
+    if(value === 1) {
+      this.setState({ style: 'Jazz'}, () => {
+        this.props.getStyle('Jazz')
+      })
+    } if(value === 2) {
+      this.setState({ style: 'Rock'}, () => {
+        this.props.getStyle('Rock')
+      })
+      } if(value === 3) {
+        this.setState({ style: 'Pop'}, () => {
+          this.props.getStyle('Pop')
+        })
+        } if(value === 4) {
+          this.setState({ style: 'Mpb'}, () => {
+            this.props.getStyle('Mpb')
+          })
+          }
   }
      
   render() {
+    console.log(this.state)
       return(
         <div className="full-page-white">
           <FormFour 
+          getAnswerFour={this.getAnswerFour}
           label='Falando de estílo? Você prefere?' 
           input1='Jazz' 
           input2='Rock' 

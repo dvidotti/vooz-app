@@ -8,26 +8,27 @@ class Q1 extends Component {
   constructor(props){
     super(props);
     this.state = {
-      level:''
+      level:""
     }
     this.getAnswer = this.getAnswer.bind(this);
   }
 
- getAnswer(value){
-   console.log(value)
-   if(value === '1'){
-     this.setState({level: 'intermediate'})
-    } if (value === '2') {
-      this.setState({level: 'begginer'})
+  getAnswer(value) {
+    if(value === 1) {
+      this.setState({level: 'iniciante'});
+    //  this.props.getLevel(this.state.level);
+    } if(value === 2) {
+      this.setState({level:'intermediário'});
+    //   this.props.getLevel(this.state.level);
     }
- }
+  }
+
   
   render() {
-    console.log('mudou estado', this.state)
     return(
       <div>
         <div className="full-page-white">
-          <FormTwo getAnswerQ1={() => this.getAnswer()} label='O que você achou?' input1='Fácil' input2='Difícil' option1='/play2' option2='/play3'/>
+          <FormTwo getAnswer={this.getAnswer} label='O que você achou?' input1='Fácil' input2='Difícil' option1='/play2' option2='/play3'/>
           <div className='legend-block2'>
             <img className="legend2" src={legend2} alt="progress"/>
           </div>

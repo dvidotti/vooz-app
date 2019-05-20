@@ -1,42 +1,21 @@
-.full-page-black {
-  width: 100%;
-  /* align-items: center; */
-  /* margin: 0; */
-  background-color: black;
-  color: white;
-  border: 1px solid red;
-}
-
-.legend-block2 {
-  display: block;
-  margin: auto;
-  align-items: center;
-  width:40%;
-  margin-top:20%;
-}
-
-.legend2{
-  margin: auto;
-  align-items: center;
-  width: 15%;
-  margin-bottom:5%;
-  display: block;
-  position: absolute;
-  bottom:5%;
-  z-index: -1;
-}
-
-
+  /* .full-page-black { */
+    /* width: 100%; */
+    /* align-items: center; */
+    /* margin: 0; */
+    /* background-color: black; */
+    /* color: white; */
+    /* border: 1px solid red; */
+  /* } */
 
 
 @media (max-width: 750px){
-  .full-page-black {
+  /* .full-page-black {
     width: 100%;
     align-items: center;
     margin: 0 auto;
     background-color: black;
     color: white;
-  }
+  } */
 
   .legend-block2 {
     display: block;

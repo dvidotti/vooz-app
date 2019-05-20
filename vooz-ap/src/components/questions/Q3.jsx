@@ -9,15 +9,30 @@ import Footer from '../footer/Footer'
 class Q3 extends Component {
   constructor(props){
     super(props);
-    this.state = {}
+    this.state = {
+      level:""
+    }
+    this.getAnswer = this.getAnswer.bind(this);
+  }
+
+  getAnswer(value) {
+    if(value === 1) {
+      this.setState({level: 'intermediário'}, () => {
+        this.props.getLevel(this.state.level);
+      });
+    } if(value === 2) {
+      this.setState({level:'iniciante'}, () => {
+        this.props.getLevel(this.state.level);
+      });
+    }
   }
 
     render() {
       return(
         <div className="full-page-white">
-          <FormTwo label='E agora como foi?' input1='Fácil' input2='Difícil' option1='/q4' option2='/q4'/>
-          <div className='legend-block'>
-            <img className="legend" src={legend4} alt="progress"/>
+          <FormTwo getAnswer={this.getAnswer} label='E agora como foi?' input1='Fácil' input2='Difícil' option1='/q4' option2='/q4'/>
+          <div className='legend-block4'>
+            <img className="legend4" src={legend4} alt="progress"/>
           </div>
           <Footer /> 
         </div>

@@ -8,13 +8,31 @@ import Footer from '../footer/Footer'
 class Q2 extends Component {
   constructor(props){
     super(props);
-    this.state = {}
+    this.state = {
+      level: ''
+    }
+    this.getAnswer = this.getAnswer.bind(this);
   }
 
+    getAnswer(value) {
+      if(value === 2) {
+        this.setState({level: 'intermediário'}, () => {
+          this.props.getLevel(this.state.level);
+        });
+      } if(value === 1) {
+        this.setState({level:'avançado'}, () => {
+          this.props.getLevel(this.state.level);
+        });
+      }
+    }
+
     render() {
+      console.log('PropsQ2', this.props)
+      console.log('StateQ2', this.state )
       return(
         <div className="full-page-white">
           <FormTwo 
+          getAnswer= {this.getAnswer}
           label='E agora como foi?' 
           input1='Fácil' 
           input2='Difícil' 

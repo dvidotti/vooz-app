@@ -20,27 +20,24 @@ class FormFour extends Component {
   }
 
   statusSelect1() {
-    this.setState({
-      isSelect1: true
-    });  
+    if (this.props.artists) {
+      this.setState({ isSelect1: true }, this.props.getAnswerArtist(1));  
+    } else {
+      this.setState({ isSelect1: true }, this.props.getAnswerFour(1));  
+    }
+  
   }
   
   statusSelect2() {
-    this.setState({
-      isSelect2: true
-    });  
+    this.setState({ isSelect2: true }, this.props.getAnswerFour(2));  
   }
 
   statusSelect3() {
-    this.setState({
-      isSelect3: true
-    });  
+    this.setState({ isSelect3: true }, this.props.getAnswerFour(3));   
   }
 
   statusSelect4() {
-    this.setState({
-      isSelect4: true
-    });  
+    this.setState({ isSelect4: true }, this.props.getAnswerFour(4)); 
   }
 
   render() {

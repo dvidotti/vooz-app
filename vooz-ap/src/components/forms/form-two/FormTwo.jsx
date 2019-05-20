@@ -21,12 +21,14 @@ class FormTwo extends Component {
     this.setState({
       isSelect1: true
     });  
+    this.props.getAnswer(1); 
   }
   
   statusSelect2() {
     this.setState({
-      isSelect2: true
-    });  
+      isSelect2: true,
+    }); 
+    this.props.getAnswer(2); 
   }
 
   render() {

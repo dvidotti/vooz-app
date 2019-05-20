@@ -5,14 +5,38 @@ import './Q.css'
 class QJazz extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      artist: ''
+    }
+    this.getAnswerArtist = this.getAnswerArtist.bind(this);
   }
   
+  getAnswerArtist(value){
+    if(value === 1) {
+        this.setState({ artist: 'Tony Bennet'}, () => {
+          this.props.getArtist('Tony Bennet')
+        })
+    } if(value === 2) {
+        this.setState({ artist: 'Ella Fitzgerald'}, () => {
+          this.props.getArtist('Ella Fitzgerald')
+        })
+      } if(value === 3) {
+          this.setState({ artist: 'Diana Krall'}, () => {
+            this.props.getArtist('Diana Krall')
+          })
+        } if(value === 4) {
+            this.setState({ artist: 'Frank Sinatra'}, () => {
+              this.props.getArtist('Frank Sinatra')
+            })
+          }
+  }
 
   render() {
     return(
       <div className="full-page-black">
         <FormFour 
+        artists
+        getAnswerArtist= {this.getAnswerArtist}
         label='E se você fosse um cantorxs?' 
         input1='Tony Bennet' 
         input2='Ella Fitzgerald' 
@@ -24,7 +48,7 @@ class QJazz extends Component {
         option4='/qwishes' 
         />
       </div>
-      )
+    )
   }
 }
 

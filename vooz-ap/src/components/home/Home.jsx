@@ -8,18 +8,6 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
-      level: '',
-      range: '',
-      intensity: '',
-      air: '',
-      style: '',
-      record: '',
-      artist: '',
-      wishes: '',
-      email: '',
-      name: '',
-      username: '',
-      password: '',
       redirect: false
     }
     console.log('########', this.state)

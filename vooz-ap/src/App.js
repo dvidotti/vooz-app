@@ -18,7 +18,37 @@ import { Switch, Route } from 'react-router-dom'
 import './App.css';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      level: 'igual',
+      range: '',
+      intensity: '',
+      air: '',
+      style: '',
+      record: '',
+      artist: '',
+      wishes: '',
+      email: '',
+      name: '',
+      username: '',
+      password: '',
+    }
+    this.getLevel = this.getLevel.bind(this);
+    this.getStyle = this.getStyle.bind(this);
+  }
+  
+
+  getLevel(value){
+    this.setState({level: value});
+  }
+
+  getStyle(value){
+    this.setState({ style: value});
+  }
+
   render(){
+    console.log('ARRENHHAAAAAA', this.state.style)
     return (
       <div className="App">
         <Switch>
@@ -28,9 +58,10 @@ class App extends Component {
             <Route exact path='/play3' component={Play3} />
             <Route exact path='/play4' component={Play4} />
             <Route path='/q1' component={Q1} />
-            <Route path='/q2' component={Q2} />
-            <Route path='/q3' component={Q3} />
-            <Route path='/q4' component={Q4} />
+            <Route path='/q2' render={(props) =><Q2  getLevel={this.getLevel} />} />
+            <Route path='/q3' render={(props) =><Q3  getLevel={this.getLevel} />} />
+            <Route path='/q4' render={(props) => <Q4 getStyle={this.getStyle} />} />
+            {/* <Route path='/q4' component={Q4} /> */}
             <Route path='/qjazz' component={QJazz} />
             <Route path='/qpop' component={QPop} />
             <Route path='/qrock' component={QRock} />
