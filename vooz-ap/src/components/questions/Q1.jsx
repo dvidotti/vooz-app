@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import FormTwo from '../forms/form-two/FormTwo'
-import './Q.css'
+import '../play/Play.css'
+import Footer from '../footer/Footer'
+import legend2 from '../../img/Legenda 2 Mobile.svg'
 
 class Q1 extends Component {
   constructor(props){
@@ -24,7 +26,13 @@ class Q1 extends Component {
     console.log('mudou estado', this.state)
     return(
       <div>
-        <FormTwo getAnswerQ1={() => this.getAnswer()} label='O que você achou?' input1='Fácil' input2='Difícil' option1='/play2' option2='/play3'/>
+        <div className="full-page-white">
+          <FormTwo getAnswerQ1={() => this.getAnswer()} label='O que você achou?' input1='Fácil' input2='Difícil' option1='/play2' option2='/play3'/>
+          <div className='legend-block2'>
+            <img className="legend2" src={legend2} alt="progress"/>
+          </div>
+        </div>
+        <Footer />  
       </div>
     )
   }

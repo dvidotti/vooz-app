@@ -1,5 +1,49 @@
+.navbar {
+  margin-top:0%;
+}
+
 .nav-button1 {  
-  margin-top: 10%;
-  margin-bottom:10%;
+  display:none; 
+}
+
+.horizontal-menu{
+  display:flex;
+  justify-content: space-between;
+}
+
+.right-menu{
+  padding: 4%;
+  margin-right:3%; 
+  font-size:1.5em; 
+  color: black;
+  text-decoration: none;  
+}
+
+.left-menu{
+  padding: 4%;  
+  margin-left:3%;
+  font-size:1.5em;
+  color: black;
+  text-decoration: none; 
+}
+
+
+@media (max-width: 600px){
+  .navbar {
+    margin-top:15%;
+  }
+  
+  .horizontal-menu{
+    display:none;
+  }
+
+  .nav-button1 {  
+    display:inline;
+    margin-top:0%;
+    margin-bottom:0%;
+  }
+  .logo-white-image {
+    width:50%;
+  }
 }
 

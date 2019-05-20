@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import NavBar from '../../navbar/NavBar'
-import Footer from '../../footer/Footer'
-import './FormFour.css'
+import '../form-four/FormFour.css'
 
 
 class FormFour extends Component {
@@ -55,18 +54,21 @@ class FormFour extends Component {
           return <Redirect to={this.props.option4}/>
         }  
     return(
-      <div className='full-page'>
-        <NavBar />
-        <h1 className='box-question'>Vamos falar de estilo.<br/>Você é do?</h1>
-        <div className='answer-up-box'>
-          <button className='answer1-box' onClick={this.statusSelect1}>Jazz</button> 
-          <button className='answer2-box'  onClick={this.statusSelect2}>Rock</button> 
+      <div className='full-page-black'>
+        <div className='navbar-white'>
+          <NavBar />
         </div>
-        <div className='answer-bottom-box'>
-          <button className='answer3-box'  onClick={this.statusSelect3}>Pop</button> 
-          <button className='answer4-box'  onClick={this.statusSelect4}>MPB</button> 
+        <div className='box-question-black'>
+           <h1 >{this.props.label}</h1>
         </div>
-        <Footer /> 
+        <div className='answer-up-box-black '>
+          <button className='answer1-box-black ' onClick={this.statusSelect1}><p>{this.props.input1}</p></button> 
+          <button className='answer2-box-black '  onClick={this.statusSelect2}><p>{this.props.input2}</p></button> 
+        </div>
+        <div className='answer-bottom-box-black '>
+          <button className='answer3-box-black '  onClick={this.statusSelect3}><p>{this.props.input3}</p></button> 
+          <button className='answer4-box-black '  onClick={this.statusSelect4}><p>{this.props.input4}</p></button> 
+        </div>
       </div>
     )
   }

@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import NavBar from '../navbar/NavBar'
 import Footer from '../footer/Footer'
-import play from '../../img/Play.png'
+import play from '../../img/Play Mobile.svg'
 import './Play.css'
 import axios from 'axios'
 import next from '../../img/Next.png'
 import Sound from 'react-sound'
 import { Link } from 'react-router-dom'
+import legend3 from '../../img/Legenda 3 Mobile.svg'
+
 
 class Play2 extends Component {
   constructor(props) {
@@ -32,19 +34,24 @@ class Play2 extends Component {
   render() {
     return (
       <div>
-        <NavBar />
-        <h1 className="text">Cante esta melodia<br/>também.</h1>
-        <Sound
-          url={this.state.audio}
-          playStatus={Sound.status.PLAYING}
-         // playFromPosition={300 /* in milliseconds */}
-         // onLoading={this.handleSongLoading}
-         // onPlaying={this.handleSongPlaying}
-         // onFinishedPlaying={this.handleSongFinishedPlaying}
+        <div className="full-page-white">
+          <NavBar />
+          <h1 className="text">Cante esta melodia<br/>também.</h1>
+          <Sound
+            url={this.state.audio}
+            playStatus={Sound.status.PLAYING}
+          // playFromPosition={300 /* in milliseconds */}
+          // onLoading={this.handleSongLoading}
+          // onPlaying={this.handleSongPlaying}
+          // onFinishedPlaying={this.handleSongFinishedPlaying}
           />
-        <button onClick={this.getAudio}className="btn-play"><img src={play} alt="play"/></button>
-        <div className="next">
-        <Link to='/q2'><img src={next} alt="next"/></Link>
+          <button onClick={this.getAudio}className="btn-play"><img className="play-button" src={play} alt="play"/></button>
+          <div className="next">
+            <Link to='/q2'><img className='next-image' src={next} alt="next"/></Link>
+          </div>
+          <div className='legend-block'>
+            <img className="legend" src={legend3} alt="progress"/>
+          </div>
         </div>
         <Footer />
       </div>

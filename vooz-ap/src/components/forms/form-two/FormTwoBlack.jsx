@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import NavBar from '../../navbar/NavBar'
+import FooterWhite from '../../footer/FooterWhite'
+import './FormTwoBlack.css'
 
 
-import './FormTwo.css'
-
-
-class FormTwo extends Component {
+class FormTwoBlack extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isSelect1: false,
-      isSelect2: false
+      isSelect2: false,
     }
     this.statusSelect1 = this.statusSelect1.bind(this);
     this.statusSelect2 = this.statusSelect2.bind(this);
+  
   }
 
   statusSelect1() {
@@ -29,23 +29,26 @@ class FormTwo extends Component {
     });  
   }
 
+
+
   render() {
     if(this.state.isSelect1) {
       return <Redirect to={this.props.option1} /> 
     } if(this.state.isSelect2) {
         return <Redirect to={this.props.option2}/> 
-      }
+      } 
     return(
-      <div>
+      <div className='full-page'>
         <NavBar />
-        <h1 className='question'>{this.props.label}</h1>
-        <div className='answer-box'>
-          <button className='answer1' onClick={this.statusSelect1}>{this.props.input1}</button> 
-          <button className='answer2'  onClick={this.statusSelect2}>{this.props.input2}</button> 
+        <h1 className='box-question'>{this.props.label}</h1>
+        <div className='answer-up-box'>
+          <button className='answer1-box' onClick={this.statusSelect1}><p>{this.props.input1}</p></button> 
+          <button className='answer2-box'  onClick={this.statusSelect2}><p>{this.props.input2}</p></button> 
         </div>
+        <FooterWhite /> 
       </div>
     )
   }
 }
 
-export default FormTwo;
+export default FormTwoBlack;

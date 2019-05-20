@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import NavBar from '../navbar/NavBar'
 import Footer from '../footer/Footer'
-import play from '../../img/Play.png'
+import play from '../../img/Play Mobile.svg'
 import './Play.css'
 import axios from 'axios'
-import next from '../../img/Next.png'
+import next from '../../img/Next@3x.png'
 import Sound from 'react-sound'
 import { Link } from 'react-router-dom'
+import legend1 from '../../img/Legenda 1 Mobile.svg'
 
 class Play1 extends Component {
   constructor(props) {
@@ -34,23 +35,25 @@ class Play1 extends Component {
   render() {
     return (
       <div>
-        <NavBar />
-        <h1 className="text">Escute, depois cante.<br/>Repita a melodia</h1>
-        {/* <button onClick={this.innerRef}>ClickMe</button> */}
-        <Sound
-          url={this.state.audio}
-          playStatus={Sound.status.PLAYING}
-         // playFromPosition={300 /* in milliseconds */}
-         // onLoading={this.handleSongLoading}
-         // onPlaying={this.handleSongPlaying}
-         // onFinishedPlaying={this.handleSongFinishedPlaying}
+        <div className="full-page-white">
+          <NavBar />
+          <h1 className="text">Escute, depois cante.<br/>Repita a melodia</h1>
+          {/* <button onClick={this.innerRef}>ClickMe</button> */}
+          <Sound
+            url={this.state.audio}
+            playStatus={Sound.status.PLAYING}
+          // playFromPosition={300 /* in milliseconds */}
+          // onLoading={this.handleSongLoading}
+          // onPlaying={this.handleSongPlaying}
+          // onFinishedPlaying={this.handleSongFinishedPlaying}
           />
-        <button onClick={this.getAudio}className="btn-play"><img src={play} alt="play"/></button>
-        <div className="next">
-        <Link  to={{ 
-          pathname:'/q1',
-          state: this.props.location.state
-        }}><img  src={next} alt="next"/></Link>
+          <button onClick={this.getAudio}className="btn-play"><img className="play-button" src={play} alt="play"/></button>
+          <div className="next">
+            <Link  to='/q1'><img className='next-image' src={next} alt="next"/></Link>
+          </div>
+          <div className='legend-block1'>
+            <img className="legend1" src={legend1} alt="progress"/>
+          </div>
         </div>
         <Footer />
       </div>

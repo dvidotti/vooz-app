@@ -1,4 +1,34 @@
 .footer-button1{
-width: 25%;
-margin-top: 80%; 
+padding-top:9%; 
+padding-bottom: 4%;
+width: 30%;
+position: relative;
 }
+  
+.footer-button2{
+width: 30%;
+position: relative;
+}
+
+.footer-button-white{ 
+ 
+}
+
+.footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;   /* Height of the footer */
+  background:white;
+  align-items: center;
+  padding-bottom:2%;
+} 
+
+.header {
+  height: 15%;
+}
+
+.logo-white-image{
+  width: 15%;
+}
+  

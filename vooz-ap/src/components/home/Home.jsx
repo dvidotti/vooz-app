@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import NavBar from '../navbar/NavBar'
-import logo from '../../img/Logo Big.png'
+import logo from '../../img/Logo Grande Mobile.svg'
 import './Home.css'
-import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 class Home extends Component {
   constructor() {
@@ -19,31 +19,32 @@ class Home extends Component {
       email: '',
       name: '',
       username: '',
-      password: ''
+      password: '',
+      redirect: false
     }
     console.log('########', this.state)
-    this.handler = this.handler.bind(this);
+    this.redirect = this.redirect.bind(this);
   }
   
 
-  handler() {
+  redirect() {
    this.setState({
-    level: "begginer"
+    redirect: true
    });
-   console.log('CHEGOU');
   };  
   
-
   render(){
+    if(this.state.redirect){
+     return <Redirect to='/play1'/>
+    }
     console.log('AGORA VAI', this.state)
     return (
-      <div>
-      <NavBar />
-      {/* <button onClick={() => this.handler()}>ClickMe</button> */}
-      <img className="logo" src={logo} alt="vooz" />
-      <h1 className="slogan">Descubra a sua voz</h1>
-      <button className="btn-home"><Link className="link-home" to='/play1'
-          innerRef={this.handler}>Faça o teste</Link></button>
+      <div className="full-page-white">
+        <NavBar />
+        {/* <button onClick={() => this.handler()}>ClickMe</button> */}
+        <img className="logo" src={logo} alt="vooz" />
+        <h1 className="slogan">Descubra a sua voz</h1>
+    <button onClick={this.redirect} className="btn-home">Faça o teste</button>
       </div>
     )
   }

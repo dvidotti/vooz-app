@@ -7,7 +7,13 @@ import Play4 from './components/play/Play4'
 import Q1 from './components/questions/Q1'
 import Q2 from './components/questions/Q2'
 import Q3 from './components/questions/Q3'
-import FormFour from './components/forms/form-four/FormFour'
+import Q4 from './components/questions/Q4'
+import QJazz from './components/questions/QJazz'
+import QRock from './components/questions/QRock'
+import QPop from './components/questions/QPop'
+import QMpb from './components/questions/QMpb'
+import QWishes from './components/questions/QWishes'
+import YourVoice from './components/your-voice/YourVoice'
 import { Switch, Route } from 'react-router-dom'
 import './App.css';
 
@@ -24,7 +30,14 @@ class App extends Component {
             <Route path='/q1' component={Q1} />
             <Route path='/q2' component={Q2} />
             <Route path='/q3' component={Q3} />
-            <Route path='/formfour' component={FormFour} />
+            <Route path='/q4' component={Q4} />
+            <Route path='/qjazz' component={QJazz} />
+            <Route path='/qpop' component={QPop} />
+            <Route path='/qrock' component={QRock} />
+            <Route path='/qmpb' component={QMpb} />
+            <Route path='/qwishes' component={QWishes} />
+            <Route path='/yourvoice' component={YourVoice} />
+
           </Switch>
       </div>
     );
