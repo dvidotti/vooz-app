@@ -17,8 +17,9 @@ import QPop from './components/questions/QPop'
 import QMpb from './components/questions/QMpb'
 import QWishes from './components/questions/QWishes'
 import YourVoice from './components/your-voice/YourVoice'
-import SignUp from './components/auth/Signup'
+import SignUp from './components/auth/SignUp'
 import LogIn from './components/auth/LogIn'
+import Ella from './components/artist/Ella'
 
 import { Switch, Route } from 'react-router-dom'
 import './App.css';
@@ -126,6 +127,8 @@ class App extends Component {
             <Route path='/yourvoice' render={(props) => <YourVoice userInfo={this.state} /> } />
             <Route path='/signup' render={(props) => <SignUp userInfo={this.state} getUser={this.getTheUser} /> } />
             <Route path='/login' render={(props) => <LogIn userInfo={this.state} getUser={this.getTheUser} /> } />
+            <Route path='/ella' component={Ella} />
+      
           </Switch>
       </div>
     );

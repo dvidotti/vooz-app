@@ -1,0 +1,23 @@
+.ella {
+  background-image: url("../../img/ella_mobile_ok.png");
+  widows: 100%;
+  height: 100vh;
+}
+
+.artist-footer{
+  background-color: transparent;
+}
+
+.central-artist {
+  background-color: white;  
+  padding: 5%;
+  font-size: 1.5em;
+  position: absolute;
+  top:40%;
+  z-index: 1;
+  text-align: center;
+}
+
+.artist-navbar{
+  margin-top: 50%;
+}

@@ -11,9 +11,6 @@
 
 .answer1{
   border: 1.5px solid black;
-  margin-left:0%;
-  margin-right:0%;
-  margin-top:0%;
   padding-top:2%;
   padding-bottom:2%;
   font-weight: 100;
@@ -35,9 +32,6 @@
 
 .answer2{
   border: 1.5px solid black;
-  margin-left:0%;
-  margin-right:0%;
-  margin-top:0%;
   padding-top:7%;
   padding-bottom:7%;
   font-weight: 100;
@@ -63,14 +57,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 @media (max-width: 700px){
   .question{
     border: 1.5px solid black;
@@ -85,8 +71,6 @@
   
   .answer1{
     border: 1.5px solid black;
-    margin-left:0%;
-    margin-right:0%;
     margin-top:2%;
     padding-top:5%;
     padding-bottom:5%;
@@ -109,8 +93,6 @@
   
   .answer2{
     border: 1.5px solid black;
-    margin-left:0%;
-    margin-right:0%;
     margin-top:2%;
     padding-top:7%;
     padding-bottom:7%;
@@ -131,7 +113,6 @@
     width: 70vh;
     height: 100vh;
     align-items: center;
-    margin: 0 auto;
     background-color: black;
     color: white;
   }

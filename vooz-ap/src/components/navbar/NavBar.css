@@ -1,5 +1,6 @@
 .navbar {
   margin-top:0%;
+  height: 5vh;
 }
 
 .nav-button1 {  
@@ -29,8 +30,8 @@
 
 
 @media (max-width: 600px){
-  .navbar {
-    margin-top:15%;
+  .navbar, .navbar-black {
+    padding-top:15%;
   }
   
   .horizontal-menu{
@@ -39,11 +40,13 @@
 
   .nav-button1 {  
     display:inline;
-    margin-top:0%;
-    margin-bottom:0%;
   }
+  
   .logo-white-image {
     width:50%;
+  }
+  .navbar-black {
+    background-color: black;  
   }
 }
 

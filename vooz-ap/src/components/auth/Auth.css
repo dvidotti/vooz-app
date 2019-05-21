@@ -1,0 +1,68 @@
+.full-signup-page{
+  background: black;
+  color: white;
+  height:100vh;
+  width: 100%;
+}
+
+
+.form{  
+ padding: 5% 5%;
+ height: 60vh;
+ border: 1px solid black;
+ margin:auto;
+
+}
+
+.form-label{
+  display:block;
+  text-align: left; 
+  width: 100%;
+  margin-top: 8%;
+  margin-left: 2%;
+  font-size: 1.1em;
+}
+
+.title{
+  display:block;
+  width: 70%;
+  margin: auto;
+  font-size: 1.5em;
+  padding-top:5%;
+  font-weight: 100;
+}
+
+.subtitle{
+  display:block;
+  width: 70%;
+  margin: auto;
+  font-size: 1.2em;
+  padding-top:1%;
+  font-weight: 100;
+}
+
+.form-input{
+  display:block;
+  border: 1px solid white;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  height: 6vh;
+  font-size: 1.2em;
+  padding-top:2%;
+  background-color: black;
+  color:white;  
+}
+
+
+.form-buttom{
+  display:block;
+  border: 1px solid white;
+  width: 40%;
+  margin-top: 10%;
+  height: 6vh;
+  font-size: 1.2em;
+  padding:1%;
+  background-color: white;
+  color:black;  
+}

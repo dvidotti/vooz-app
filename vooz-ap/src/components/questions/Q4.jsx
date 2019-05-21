@@ -38,7 +38,7 @@ class Q4 extends Component {
   render() {
     console.log(this.state)
       return(
-        <div className="full-page-white">
+        <div className="full-page-black">
           <FormFour 
           getAnswerFour={this.getAnswerFour}
           label='Falando de estílo? Você prefere?' 

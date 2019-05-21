@@ -1,21 +1,20 @@
-  /* .full-page-black { */
-    /* width: 100%; */
-    /* align-items: center; */
-    /* margin: 0; */
-    /* background-color: black; */
-    /* color: white; */
-    /* border: 1px solid red; */
-  /* } */
+  .full-page-black { 
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    background-color: black;
+    color: white;
+  }
 
 
 @media (max-width: 750px){
-  /* .full-page-black {
+  .full-page-black {
     width: 100%;
     align-items: center;
     margin: 0 auto;
     background-color: black;
     color: white;
-  } */
+  }
 
   .legend-block2 {
     display: block;
@@ -23,7 +22,6 @@
     align-items: center;
     width:40%;
     margin-top:20%;
-    border: 1px solid red;
   }
 
   .legend2{

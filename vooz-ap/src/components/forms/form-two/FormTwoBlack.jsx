@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import NavBar from '../../navbar/NavBar'
-import FooterWhite from '../../footer/FooterWhite'
 import './FormTwoBlack.css'
 
 
@@ -45,7 +44,6 @@ class FormTwoBlack extends Component {
           <button className='answer1-box' onClick={this.statusSelect1}><p>{this.props.input1}</p></button> 
           <button className='answer2-box'  onClick={this.statusSelect2}><p>{this.props.input2}</p></button> 
         </div>
-        <FooterWhite /> 
       </div>
     )
   }
