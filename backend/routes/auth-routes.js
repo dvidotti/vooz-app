@@ -10,49 +10,50 @@ const bcrypt = require('bcryptjs');
 const MyVoice = require('../models/my-voice');
 
 
-// authRoutes.post('/logout', (req, res, next) => {
-//   // req.logout() is defined by passport
-//   req.logout();
-//   res.status(200).json({ message: 'Log out success!' });
-// });
+authRoutes.post('/logout', (req, res, next) => {
+// req.logout() is defined by passport
+  req.logout();
+  res.status(200).json({ message: 'Log out success!' });
+});
 
 
-// authRoutes.get('/loggedin', (req, res, next) => {
-//   // req.isAuthenticated() is defined by passport
-//   if (req.isAuthenticated()) {
-//     res.status(200).json(req.MyVoice);
-//     return;
-//   }
-//   res.status(403).json({ message: 'Unauthorized' });
-// });
+authRoutes.get('/loggedin', (req, res, next) => {
+// req.isAuthenticated() is defined by passport
+  if (req.isAuthenticated()) {
+    res.status(200).json(req.MyVoice);
+    return;
+  }
+  res.status(403).json({ message: 'Unauthorized' });
+});
 
+// LOGIN ROUTE
 
-// authRoutes.post('/login', (req, res, next) => {
-//   passport.authenticate('local', (err, theMyVoice, failureDetails) => {
-//     if (err) {
-//       res.status(500).json({ message: 'Something went wrong authenticating MyVoice' });
-//       return;
-//     }
+authRoutes.post('/login', (req, res, next) => {
+  passport.authenticate('local', (err, user, failureDetails) => {
+    if (err) {
+      res.status(500).json({ message: 'Something went wrong authenticating MyVoice' });
+      return;
+    }
 
-//     if (!theMyVoice) {
-//       // "failureDetails" contains the error messages
-//       // from our logic in "LocalStrategy" { message: '...' }.
-//       res.status(401).json(failureDetails);
-//       return;
-//     }
+    if (!user) {
+      // "failureDetails" contains the error messages
+      // from our logic in "LocalStrategy" { message: '...' }.
+      res.status(401).json(failureDetails);
+      return;
+    }
 
-//     // save MyVoice in session
-//     req.login(theMyVoice, (err) => {
-//       if (err) {
-//         res.status(500).json({ message: 'Session save went bad.' });
-//         return;
-//       }
+    // save MyVoice in session
+    req.login(user, (err) => {
+      if (err) {
+        res.status(500).json({ message: 'Session save went bad.' });
+        return;
+      }
 
-//       // We are now logged in (that's why we can also send req.MyVoice)
-//       res.status(200).json(theMyVoice);
-//     });
-//   })(req, res, next);
-// });
+      // We are now logged in (that's why we can also send req.MyVoice)
+      res.status(200).json(user);
+    });
+  })(req, res, next);
+});
 
 
 // SIGN UP ROUTE
@@ -108,18 +109,18 @@ authRoutes.post('/signup', (req, res, next) => {
       
       // Automatically log in user after sign up
       // .login() here is actually predefined passport method
-      req.login(aNewVoice, (err) => {
-        if (err) {
-          res.status(500).json({ message: 'Login after signup went bad.' });
-          return;
-        }
+      // req.login(aNewVoice, (err) => {
+      //   if (err) {
+      //     res.status(500).json({ message: 'Login after signup went bad.' });
+      //     return;
+      //   }
     
-        // Send the user's information to the frontend
-        // We can use also: res.status(200).json(req.user);
-        res.status(200).json(aNewVoice);
-      });
+      // Send the user's information to the frontend
+      // We can use also: res.status(200).json(req.user);
+      res.status(200).json(aNewVoice);
     });
   });
 });
+// });
 
 module.exports = authRoutes;

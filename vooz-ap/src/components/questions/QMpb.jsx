@@ -5,7 +5,30 @@ import './Q.css'
 class QMpb extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      artist: ''
+    }
+    this.getAnswerArtistMpb = this.getAnswerArtistMpb.bind(this);
+  }
+  
+  getAnswerArtistMpb(value){
+    if(value === 1) {
+        this.setState({ artist: 'Caetano Veloso'}, () => {
+          this.props.getArtist('Caetano Veloso')
+        })
+    } if(value === 2) {
+        this.setState({ artist: 'Maria Rita'}, () => {
+          this.props.getArtist('Maria Rita')
+        })
+      } if(value === 3) {
+          this.setState({ artist: 'Gal Costa'}, () => {
+            this.props.getArtist('Gal Costa')
+          })
+        } if(value === 4) {
+            this.setState({ artist: 'Djavan'}, () => {
+              this.props.getArtist('Djavan')
+            })
+          }
   }
   
 
@@ -13,6 +36,8 @@ class QMpb extends Component {
       return(
         <div className="full-page-black">
           <FormFour 
+          mpb
+          getAnswerArtistMpb= {this.getAnswerArtistMpb}
           label='E se você fosse um cantorxs?' 
           input1='Caetano Veloso' 
           input2='Maria Rita' 

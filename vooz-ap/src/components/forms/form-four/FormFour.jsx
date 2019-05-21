@@ -21,23 +21,66 @@ class FormFour extends Component {
 
   statusSelect1() {
     if (this.props.artists) {
-      this.setState({ isSelect1: true }, this.props.getAnswerArtist(1));  
-    } else {
-      this.setState({ isSelect1: true }, this.props.getAnswerFour(1));  
-    }
-  
+      this.setState({ isSelect1: true }, this.props.getAnswerArtist(1));
+    } else if (this.props.mpb) {
+        this.setState({ isSelect1: true }, this.props.getAnswerArtistMpb(1));
+      } else if (this.props.pop) {
+          this.setState({ isSelect1: true }, this.props.getAnswerArtistPop(1));
+        } else if (this.props.rock) {
+            this.setState({ isSelect1: true }, this.props.getAnswerArtistRock(1));
+          } else if (this.props.wishes) {
+             this.setState({ isSelect1: true }, this.props.getAnswerWishes(1));
+            } else {
+                this.setState({ isSelect1: true }, this.props.getAnswerFour(1));  
+              } 
   }
   
   statusSelect2() {
-    this.setState({ isSelect2: true }, this.props.getAnswerFour(2));  
+    if (this.props.artists) {
+      this.setState({ isSelect2: true }, this.props.getAnswerArtist(2));
+    } else if (this.props.mpb) {
+        this.setState({ isSelect2: true }, this.props.getAnswerArtistMpb(2));
+      } else if (this.props.pop) {
+          this.setState({ isSelect2: true }, this.props.getAnswerArtistPop(2));
+        } else if (this.props.rock) {
+            this.setState({ isSelect2: true }, this.props.getAnswerArtistRock(2));
+          } else if (this.props.wishes) {
+            this.setState({ isSelect2: true }, this.props.getAnswerWishes(2));
+            } else {
+              this.setState({ isSelect2: true }, this.props.getAnswerFour(2));  
+              }  
   }
 
   statusSelect3() {
-    this.setState({ isSelect3: true }, this.props.getAnswerFour(3));   
+    if (this.props.artists) {
+      this.setState({ isSelect3: true }, this.props.getAnswerArtist(3));
+    } else if (this.props.mpb) {
+        this.setState({ isSelect3: true }, this.props.getAnswerArtistMpb(3));
+      } else if (this.props.pop) {
+          this.setState({ isSelect3: true }, this.props.getAnswerArtistPop(3));
+        } else if (this.props.rock) {
+            this.setState({ isSelect3: true }, this.props.getAnswerArtistRock(3));
+          } else if (this.props.wishes) {
+             this.setState({ isSelect3: true }, this.props.getAnswerWishes(3));
+            } else {
+                this.setState({ isSelect3: true }, this.props.getAnswerFour(3));  
+            } 
   }
 
   statusSelect4() {
-    this.setState({ isSelect4: true }, this.props.getAnswerFour(4)); 
+    if (this.props.artists) {
+      this.setState({ isSelect4: true }, this.props.getAnswerArtist(4));
+    } else if (this.props.mpb) {
+        this.setState({ isSelect4: true }, this.props.getAnswerArtistMpb(4));
+      } else if (this.props.pop) {
+          this.setState({ isSelect4: true }, this.props.getAnswerArtistPop(4));
+        } else if (this.props.rock) {
+            this.setState({ isSelect4: true }, this.props.getAnswerArtistRock(4));
+          } else if (this.props.wishes) {
+            this.setState({ isSelect4: true }, this.props.getAnswerWishes(4));
+            } else {
+                this.setState({ isSelect4: true }, this.props.getAnswerFour(4));  
+              } 
   }
 
   render() {

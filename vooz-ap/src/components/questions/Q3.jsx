@@ -30,7 +30,14 @@ class Q3 extends Component {
     render() {
       return(
         <div className="full-page-white">
-          <FormTwo getAnswer={this.getAnswer} label='E agora como foi?' input1='Fácil' input2='Difícil' option1='/q4' option2='/q4'/>
+          <FormTwo 
+            getAnswer={this.getAnswer} 
+            label='E agora como foi?' 
+            input1='Fácil' 
+            input2='Difícil' 
+            option1='/qRange' 
+            option2='/qRange'
+          />
           <div className='legend-block4'>
             <img className="legend4" src={legend4} alt="progress"/>
           </div>

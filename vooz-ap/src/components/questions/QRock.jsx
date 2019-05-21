@@ -5,14 +5,39 @@ import './Q.css'
 class QRock extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      artist: ''
+    }
+    this.getAnswerArtistRock = this.getAnswerArtistRock.bind(this);
+  }
+  
+  getAnswerArtistRock(value){
+    if(value === 1) {
+        this.setState({ artist: 'Florence'}, () => {
+          this.props.getArtist('Florence')
+        })
+    } if(value === 2) {
+        this.setState({ artist: 'Eddie Veder'}, () => {
+          this.props.getArtist('Eddie Veder')
+        })
+      } if(value === 3) {
+          this.setState({ artist: 'Renato Russo'}, () => {
+            this.props.getArtist('Renato Russo')
+          })
+        } if(value === 4) {
+            this.setState({ artist: 'Rita Lee'}, () => {
+              this.props.getArtist('Rita Lee')
+            })
+          }
   }
   
 
   render() {
-      return(
-        <div className="full-page-black">
-          <FormFour 
+    return(
+      <div className="full-page-black">
+        <FormFour 
+          rock
+          getAnswerArtistRock= {this.getAnswerArtistRock}
           label='E se você fosse um cantorxs?' 
           input1='Florence' 
           input2='Eddie Veder' 

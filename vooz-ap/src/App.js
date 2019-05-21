@@ -7,6 +7,9 @@ import Play4 from './components/play/Play4'
 import Q1 from './components/questions/Q1'
 import Q2 from './components/questions/Q2'
 import Q3 from './components/questions/Q3'
+import QAir from './components/questions/QAir'
+import QRange from './components/questions/QRange'
+import QIntensity from './components/questions/QIntensity'
 import Q4 from './components/questions/Q4'
 import QJazz from './components/questions/QJazz'
 import QRock from './components/questions/QRock'
@@ -14,6 +17,9 @@ import QPop from './components/questions/QPop'
 import QMpb from './components/questions/QMpb'
 import QWishes from './components/questions/QWishes'
 import YourVoice from './components/your-voice/YourVoice'
+import SignUp from './components/auth/Signup'
+import LogIn from './components/auth/LogIn'
+
 import { Switch, Route } from 'react-router-dom'
 import './App.css';
 
@@ -21,7 +27,7 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      level: 'igual',
+      level: '',
       range: '',
       intensity: '',
       air: '',
@@ -36,6 +42,11 @@ class App extends Component {
     }
     this.getLevel = this.getLevel.bind(this);
     this.getStyle = this.getStyle.bind(this);
+    this.getArtist = this.getArtist.bind(this);
+    this.getWishes = this.getWishes.bind(this);
+    this.getAir = this.getAir.bind(this);
+    this.getRange = this.getRange.bind(this);
+    this.getIntensity = this.getIntensity.bind(this);
   }
   
 
@@ -46,9 +57,52 @@ class App extends Component {
   getStyle(value){
     this.setState({ style: value});
   }
+  
+  getArtist(value){
+    this.setState({ artist: value});
+  }
+  
+  getWishes(value){
+    this.setState({ wishes: value});
+  }
+  
+  getAir(value){
+    this.setState({ air: value});
+  }
+
+  getRange(value){
+    this.setState({ range: value});
+  }
+  
+  getIntensity(value){
+    this.setState({ intensity: value});
+  }
+
+  fetchUser(){
+    if( this.state.loggedInUser === null ){
+      this.service.loggedin()
+      .then(response =>{
+        this.setState({
+          loggedInUser:  response
+        }) 
+      })
+      .catch( err =>{
+        this.setState({
+          loggedInUser:  false
+        }) 
+      })
+    }
+  }
+
+  getTheUser= (userObj) => {
+    this.setState({
+      loggedInUser: userObj
+    })
+  }
+
 
   render(){
-    console.log('ARRENHHAAAAAA', this.state.style)
+    console.log('ARRENHHAAAAAA', this.state)
     return (
       <div className="App">
         <Switch>
@@ -60,15 +114,18 @@ class App extends Component {
             <Route path='/q1' component={Q1} />
             <Route path='/q2' render={(props) =><Q2  getLevel={this.getLevel} />} />
             <Route path='/q3' render={(props) =><Q3  getLevel={this.getLevel} />} />
+            <Route path='/qrange' render={(props) =><QRange  getRange={this.getRange} />} />
+            <Route path='/qintensity' render={(props) =><QIntensity  getIntensity={this.getIntensity} />} />
+            <Route path='/qair' render={(props) =><QAir  getAir={this.getAir} />} />
             <Route path='/q4' render={(props) => <Q4 getStyle={this.getStyle} />} />
-            {/* <Route path='/q4' component={Q4} /> */}
-            <Route path='/qjazz' component={QJazz} />
-            <Route path='/qpop' component={QPop} />
-            <Route path='/qrock' component={QRock} />
-            <Route path='/qmpb' component={QMpb} />
-            <Route path='/qwishes' component={QWishes} />
-            <Route path='/yourvoice' component={YourVoice} />
-
+            <Route path='/qjazz' render={(props) => <QJazz getArtist={this.getArtist} /> } />
+            <Route path='/qpop' render={(props) => <QPop getArtist={this.getArtist} /> } />
+            <Route path='/qrock' render={(props) => <QRock getArtist={this.getArtist} /> } />
+            <Route path='/qmpb' render={(props) => <QMpb getArtist={this.getArtist} /> } />
+            <Route path='/qwishes' render={(props) => <QWishes getWishes={this.getWishes} /> }/>
+            <Route path='/yourvoice' render={(props) => <YourVoice userInfo={this.state} /> } />
+            <Route path='/signup' render={(props) => <SignUp userInfo={this.state} getUser={this.getTheUser} /> } />
+            <Route path='/login' render={(props) => <LogIn userInfo={this.state} getUser={this.getTheUser} /> } />
           </Switch>
       </div>
     );

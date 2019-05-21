@@ -36,8 +36,8 @@ class Q2 extends Component {
           label='E agora como foi?' 
           input1='Fácil' 
           input2='Difícil' 
-          option1='/q4' 
-          option2='/q4'/>
+          option1='/qRange' 
+          option2='/qRange'/>
           <div className='legend-block'>
             <img className="legend" src={legend4} alt="progress"/>
           </div>

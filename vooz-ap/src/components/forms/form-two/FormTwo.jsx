@@ -18,18 +18,37 @@ class FormTwo extends Component {
   }
 
   statusSelect1() {
-    this.setState({
-      isSelect1: true
-    });  
-    this.props.getAnswer(1); 
+    if (this.props.range) {
+      this.setState({ isSelect1: true });
+      this.props.getAnswerRange(1) 
+    } else if (this.props.intensity){
+        this.setState({ isSelect1: true });
+        this.props.getAnswerIntensity(1) 
+      } else if (this.props.air){
+          this.setState({ isSelect1: true });
+          this.props.getAnswerAir(1)
+        } else {
+            this.setState({ isSelect1: true });
+            this.props.getAnswer(1)
+          }
   }
   
   statusSelect2() {
-    this.setState({
-      isSelect2: true,
-    }); 
-    this.props.getAnswer(2); 
+    if (this.props.range) {
+      this.setState({ isSelect2: true });
+      this.props.getAnswerRange(2) 
+    } else if (this.props.intensity){
+        this.setState({ isSelect2: true });
+        this.props.getAnswerIntensity(2) 
+      } else if (this.props.air){
+          this.setState({ isSelect2: true });
+          this.props.getAnswerAir(2)
+        } else {
+            this.setState({ isSelect2: true });
+            this.props.getAnswer(2)
+          }
   }
+  
 
   render() {
     if(this.state.isSelect1) {
