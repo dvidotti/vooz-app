@@ -22,7 +22,7 @@ class YourVoice extends Component {
   render() {
     return(
       <div className="full-page-black">
-        <FormTwoBlack className='your-voice-black'
+        <FormTwoBlack
           label={`Parece que você é ${this.state.level} com aquela voz ${this.state.intensity} e quando canta todos falam que voz é ${this.state.range}. Você já fez sua primeira gravação e se quiser explorar mais o seu lado ${this.state.artist} e cantar melhor, comece aqui com nosso curso grátis.`}
           input1='Salve seu perfil' 
           input2='Faça o curso grátis' 

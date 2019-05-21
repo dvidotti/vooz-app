@@ -17,9 +17,13 @@ import QPop from './components/questions/QPop'
 import QMpb from './components/questions/QMpb'
 import QWishes from './components/questions/QWishes'
 import YourVoice from './components/your-voice/YourVoice'
+import Course1 from './components/your-voice/Course1'
 import SignUp from './components/auth/SignUp'
 import LogIn from './components/auth/LogIn'
 import Ella from './components/artist/Ella'
+import ProtectedRoute from './components/auth/protected-route'
+import AuthService from './components/auth/auth-service';
+
 
 import { Switch, Route } from 'react-router-dom'
 import './App.css';
@@ -40,7 +44,9 @@ class App extends Component {
       name: '',
       username: '',
       password: '',
+      loggedInUser: null
     }
+    this.service = new AuthService();
     this.getLevel = this.getLevel.bind(this);
     this.getStyle = this.getStyle.bind(this);
     this.getArtist = this.getArtist.bind(this);
@@ -83,8 +89,9 @@ class App extends Component {
     if( this.state.loggedInUser === null ){
       this.service.loggedin()
       .then(response =>{
+        console.log('>>>>>>', response)
         this.setState({
-          loggedInUser:  response
+          loggedInUser: response
         }) 
       })
       .catch( err =>{
@@ -103,36 +110,43 @@ class App extends Component {
 
 
   render(){
-    console.log('ARRENHHAAAAAA', this.state)
-    return (
-      <div className="App">
+    {this.fetchUser()}
+    if(this.state.loggedInUser){ 
+      return (
         <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/play1' component={Play1} />
-            <Route exact path='/play2' component={Play2} />
-            <Route exact path='/play3' component={Play3} />
-            <Route exact path='/play4' component={Play4} />
-            <Route path='/q1' component={Q1} />
-            <Route path='/q2' render={(props) =><Q2  getLevel={this.getLevel} />} />
-            <Route path='/q3' render={(props) =><Q3  getLevel={this.getLevel} />} />
-            <Route path='/qrange' render={(props) =><QRange  getRange={this.getRange} />} />
-            <Route path='/qintensity' render={(props) =><QIntensity  getIntensity={this.getIntensity} />} />
-            <Route path='/qair' render={(props) =><QAir  getAir={this.getAir} />} />
-            <Route path='/q4' render={(props) => <Q4 getStyle={this.getStyle} />} />
-            <Route path='/qjazz' render={(props) => <QJazz getArtist={this.getArtist} /> } />
-            <Route path='/qpop' render={(props) => <QPop getArtist={this.getArtist} /> } />
-            <Route path='/qrock' render={(props) => <QRock getArtist={this.getArtist} /> } />
-            <Route path='/qmpb' render={(props) => <QMpb getArtist={this.getArtist} /> } />
-            <Route path='/qwishes' render={(props) => <QWishes getWishes={this.getWishes} /> }/>
-            <Route path='/yourvoice' render={(props) => <YourVoice userInfo={this.state} /> } />
-            <Route path='/signup' render={(props) => <SignUp userInfo={this.state} getUser={this.getTheUser} /> } />
-            <Route path='/login' render={(props) => <LogIn userInfo={this.state} getUser={this.getTheUser} /> } />
-            <Route path='/ella' component={Ella} />
-      
-          </Switch>
-      </div>
-    );
-  }
+          <ProtectedRoute path='/course1' user={this.state.loggedInUser} component={Course1} />
+        </Switch>
+      ) 
+    } else {
+      return (
+        <div className="App">
+          <Switch>
+              <Route exact path='/' component={Home} />
+              <Route exact path='/play1' component={Play1} />
+              <Route exact path='/play2' component={Play2} />
+              <Route exact path='/play3' component={Play3} />
+              <Route exact path='/play4' component={Play4} />
+              <Route path='/q1' component={Q1} />
+              <Route path='/q2' render={(props) =><Q2  getLevel={this.getLevel} />} />
+              <Route path='/q3' render={(props) =><Q3  getLevel={this.getLevel} />} />
+              <Route path='/qrange' render={(props) =><QRange  getRange={this.getRange} />} />
+              <Route path='/qintensity' render={(props) =><QIntensity  getIntensity={this.getIntensity} />} />
+              <Route path='/qair' render={(props) =><QAir  getAir={this.getAir} />} />
+              <Route path='/q4' render={(props) => <Q4 getStyle={this.getStyle} />} />
+              <Route path='/qjazz' render={(props) => <QJazz getArtist={this.getArtist} /> } />
+              <Route path='/qpop' render={(props) => <QPop getArtist={this.getArtist} /> } />
+              <Route path='/qrock' render={(props) => <QRock getArtist={this.getArtist} /> } />
+              <Route path='/qmpb' render={(props) => <QMpb getArtist={this.getArtist} /> } />
+              <Route path='/qwishes' render={(props) => <QWishes getWishes={this.getWishes} /> }/>
+              <Route path='/yourvoice' render={(props) => <YourVoice userInfo={this.state} /> } />
+              <Route path='/signup' render={(props) => <SignUp userInfo={this.state} getUser={this.getTheUser} /> } />
+              <Route path='/login' render={(props) => <LogIn userInfo={this.state} getUser={this.getTheUser} /> } />
+              <Route path='/ella' component={Ella} />
+            </Switch>
+        </div>
+      )
+      }
+    }
 }
 
 export default App;

@@ -12,13 +12,13 @@ class Ella extends Component {
   constructor(){
     super();
     this.state = {
-      audio: null
+      audio: null,
     }
     this.getAudio = this.getAudio.bind(this);
+    this.teste = this.teste.bind(this);
   }
 
   componentDidMount() {
-    console.log(this.state)
     this.getAudio();
   }
   
@@ -27,33 +27,44 @@ class Ella extends Component {
     .then(resAudio =>{
       const theAudio = resAudio.data[0].audio_one
       this.setState({audio: theAudio});
-
     })
     .catch((err)=>{
       console.log(err)
     })
-  }
+  } 
+   teste() {
+     this.setState({audioLoaded: true}, () => {
+       console.log('')
+     })
+   }
   
   render() {
-    console.log('RENDER', this.state)
-    return (
-      <div className='artist-page ella'>
-        <Sound 
-            url={this.state.audio}
-            playStatus={Sound.status.PLAYING}
-          // playFromPosition={300 /* in milliseconds */}
-          // onLoading={this.handleSongLoading}
-          // onPlaying={this.handleSongPlaying}
-          // onFinishedPlaying={this.handleSongFinishedPlaying}
-          />
-        <NavBarTransparent  className='artist-navbar'/>
-        <button className='central-artist'>Ella Fitzgerald</button>
-        <div className='legend-block1'>
-          <img className="legend1" src={legend10white} alt="progress"/>
+    // if (this.state.audioRender) {
+      console.log('entrou n trdue', this.state.audio)
+      return (
+        <div className='artist-page ella'>
+          {this.state.audio && 
+          <Sound 
+              url={this.state.audio}
+              playStatus={Sound.status.PLAYING}
+              autoLoad={true}
+              // playFromPosition={300 /* in milliseconds */}
+              onLoading={this.teste}
+              onPlaying={this.handleSongPlaying}
+              onFinishedPlaying={this.handleSongFinishedPlaying}
+            />
+          }
+          <NavBarTransparent  className='artist-navbar'/>
+          <button onClick={this.getAudio} className='central-artist'>Ella Fitzgerald</button>
+          <div className='legend-block1'>
+            <img className="legend1" src={legend10white} alt="progress"/>
+          </div>
+          <FooterTransparent className='artist-footer' />
         </div>
-        <FooterTransparent className='artist-footer' />
-      </div>
-    )
+      );
+    // } else {
+    //   return null;
+    // }
   }
 }
 
