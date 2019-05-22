@@ -43,7 +43,7 @@ class QJazz extends Component {
         input3='Diana Krall'
         input4='Frank Sinatra' 
         option1='/qwishes' 
-        option2='/qwishes' 
+        option2='/ella' 
         option3='/qwishes' 
         option4='/qwishes' 
         />

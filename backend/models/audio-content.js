@@ -7,6 +7,7 @@ const contentSchema = new Schema({
   audio_two: String,
   audio_three: String,
   audio_four: String,
+  ella: String,
 });
 
 const Content = mongoose.model('Content', contentSchema);

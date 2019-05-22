@@ -114,7 +114,8 @@ class App extends Component {
     if(this.state.loggedInUser){ 
       return (
         <Switch>
-          <ProtectedRoute path='/course1' user={this.state.loggedInUser} component={Course1} />
+          <ProtectedRoute path='/course1' user={this.state.loggedInUser} userInfo={this.state} component={Course1} />
+          <ProtectedRoute path='/signup' render={(props) => <SignUp userInfo={this.state} getUser={this.getTheUser} /> } />
         </Switch>
       ) 
     } else {

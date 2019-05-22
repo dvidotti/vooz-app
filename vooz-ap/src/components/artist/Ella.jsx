@@ -1,5 +1,5 @@
 import React, { Component }from 'react'
-import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import NavBarTransparent from '../navbar/NavBarTransparent'
 import legend10white from '../../img/Legenda 10 Mobile.svg'
 import FooterTransparent from '../footer/FooterTransparent'
@@ -13,34 +13,32 @@ class Ella extends Component {
     super();
     this.state = {
       audio: null,
+      rendered: false
     }
     this.getAudio = this.getAudio.bind(this);
-    this.teste = this.teste.bind(this);
   }
 
   componentDidMount() {
+    window.setTimeout(()=> {this.setState({rendered:true})}, 15000)
     this.getAudio();
   }
   
   getAudio() {
-    axios.get("http://localhost:5000/api/my-audios?audio_one")
+    axios.get("http://localhost:5000/api/my-audios?ella")
     .then(resAudio =>{
-      const theAudio = resAudio.data[0].audio_one
+      const theAudio = resAudio.data[0].ella
       this.setState({audio: theAudio});
     })
     .catch((err)=>{
       console.log(err)
     })
   } 
-   teste() {
-     this.setState({audioLoaded: true}, () => {
-       console.log('')
-     })
-   }
+   
   
   render() {
-    // if (this.state.audioRender) {
-      console.log('entrou n trdue', this.state.audio)
+    if (this.state.rendered) {
+      return ( <Redirect to='/qwishes' />)
+     } else {
       return (
         <div className='artist-page ella'>
           {this.state.audio && 
@@ -61,13 +59,10 @@ class Ella extends Component {
           </div>
           <FooterTransparent className='artist-footer' />
         </div>
-      );
-    // } else {
-    //   return null;
-    // }
+      )
+    }
   }
 }
-
 
 
 export default Ella;
