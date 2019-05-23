@@ -38,8 +38,8 @@ class Q2 extends Component {
           input2='Difícil' 
           option1='/qRange' 
           option2='/qRange'/>
-          <div className='legend-block'>
-            <img className="legend" src={legend4} alt="progress"/>
+          <div className='legend-block-white'>
+            <img className="legend-white" src={legend4} alt="progress"/>
           </div>
           <Footer /> 
         </div>

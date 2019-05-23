@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FormFour from '../forms/form-four/FormFour'
 import '../play/Play.css'
-import legend9 from '../../img/Legenda 9 Mobile.svg'
+import legend11 from '../../img/Legenda 11 Mobile.svg'
 import FooterWhite from '../footer/FooterWhite'
 
 class QWishes extends Component {
@@ -51,7 +51,7 @@ class QWishes extends Component {
           option4='/yourvoice'  
         />
         <div className='legend-block-white'>
-          <img className="legend-white" src={legend9} alt="progress"/>
+          <img className="legend-white" src={legend11} alt="progress"/>
         </div>
         <div className='footer-white'>
           <FooterWhite /> 

@@ -38,8 +38,8 @@ class Q3 extends Component {
             option1='/qRange' 
             option2='/qRange'
           />
-          <div className='legend-block4'>
-            <img className="legend4" src={legend4} alt="progress"/>
+          <div className='legend-block-white'>
+            <img className="legend-white" src={legend4} alt="progress"/>
           </div>
           <Footer /> 
         </div>

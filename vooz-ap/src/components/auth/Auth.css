@@ -7,7 +7,7 @@
 
 
 .form{  
- padding: 5% 5%;
+ padding: 0% 5%;
  height: 60vh;
  border: 1px solid black;
  margin:auto;
@@ -18,9 +18,10 @@
   display:block;
   text-align: left; 
   width: 100%;
-  margin-top: 8%;
-  margin-left: 2%;
-  font-size: 1.1em;
+  margin-top: 7%;
+  margin-left: 4%;
+  font-size: 1em;
+  padding:1%;
 }
 
 .title{
@@ -28,8 +29,9 @@
   width: 70%;
   margin: auto;
   font-size: 1.5em;
-  padding-top:5%;
+  padding-top: 8%;
   font-weight: 100;
+  color:white;
 }
 
 .subtitle{
@@ -39,11 +41,12 @@
   font-size: 1.2em;
   padding-top:1%;
   font-weight: 100;
+  color:white;
 }
 
 .form-input{
   display:block;
-  border: 1px solid white;
+  border: .5px solid white;
   width: 100%;
   margin-top: 2%;
   margin-bottom: 5%;
@@ -59,10 +62,17 @@
   display:block;
   border: 1px solid white;
   width: 40%;
-  margin-top: 10%;
+  margin-top: 8%;
   height: 6vh;
-  font-size: 1.2em;
-  padding:1%;
+  font-size: 1em;
+  padding:3%;
   background-color: white;
   color:black;  
+}
+
+.line {
+  border-bottom:1px solid white;
+  width:90%;
+  margin: auto;
+  padding-bottom:7%;
 }

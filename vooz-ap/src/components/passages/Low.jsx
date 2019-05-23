@@ -19,14 +19,14 @@ class Low extends Component {
   }
 
   componentDidMount() {
-    window.setTimeout(()=> {this.setState({rendered:true})}, 300000)
+    window.setTimeout(()=> {this.setState({rendered:true})}, 3000)
     this.getAudio();
   }
   
   getAudio() {
-    axios.get("http://localhost:5000/api/my-audios?ella")
+    axios.get("http://localhost:5000/api/my-audios?loe")
     .then(resAudio =>{
-      const theAudio = resAudio.data[0].ella
+      const theAudio = resAudio.data[0].low
       this.setState({audio: theAudio});
     })
     .catch((err)=>{
@@ -41,10 +41,9 @@ class Low extends Component {
      } else {
       return (
         <div className='artist-page low'>
-          {this.state.audio && 
           <Sound 
               url={this.state.audio}
-              playStatus={Sound.status.STOPPED}
+              playStatus={Sound.status.PLAYING}
               autoLoad={true}
               // playFromPosition={300 /* in milliseconds */}
               onLoading={this.teste}
@@ -53,9 +52,6 @@ class Low extends Component {
             />
           }
           <NavBarTransparent  className='artist-navbar'/>
-          <div className='legend-block1'>
-            <img className="legend1" src={legend10white} alt="progress"/>
-          </div>
           <FooterTransparent className='artist-footer' />
         </div>
       )

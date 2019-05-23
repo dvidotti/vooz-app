@@ -22,7 +22,10 @@ import SignUp from './components/auth/SignUp'
 import LogIn from './components/auth/LogIn'
 import Ella from './components/artist/Ella'
 import Low from './components/passages/Low'
+import StrongVoice from './components/passages/StrongVoice'
+import LightVoice from './components/passages/LightVoice'
 import High from './components/passages/High'
+import Breath from './components/passages/Breath'
 import ProtectedRoute from './components/auth/protected-route'
 import AuthService from './components/auth/auth-service';
 
@@ -150,7 +153,10 @@ class App extends Component {
               <Route path='/login' render={(props) => <LogIn userInfo={this.state} getUser={this.getTheUser} /> } />
               <Route path='/ella' component={Ella} />
               <Route path='/low' component={Low} />
+              <Route path='/breath' component={Breath} />
               <Route path='/high' component={High} />
+              <Route path='/qstrong' component={StrongVoice} />
+              <Route path='/qlight' component={LightVoice} />
             </Switch>
         </div>
       )

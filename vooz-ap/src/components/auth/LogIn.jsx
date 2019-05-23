@@ -45,6 +45,7 @@ class Login extends Component {
       return(
         <div className='full-signup-page'>
           <NavBarBlack className='nave-bar' />
+          <hr className="line" />
           <h1 className='title'>Descubra sua voz!</h1>
           <h2 className='subtitle'>Faça o login</h2>
           <form className='form' onSubmit={this.handleFormSubmit}>

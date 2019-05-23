@@ -66,6 +66,7 @@ class SignUp extends Component {
         return(
           <div className='full-signup-page'>
             <NavBarBlack className='nave-bar-black' />
+            <hr className="line" />
             <h1 className='title'>Descubra sua voz!</h1>
             <h2 className='subtitle'>Salve seu perfil</h2>
             <form className='form' onSubmit={this.handleFormSubmit}>
@@ -75,10 +76,10 @@ class SignUp extends Component {
               <input className='form-input' type="text" name="email" value={this.state.email} onChange={ e => this.handleChange(e)}/>
               <label className='form-label'>Senha:</label>
               <input className='form-input' name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
-              <input className='form-buttom' type="submit" value="Signup" />
+              <input className='form-buttom' type="submit" value="Se inscreva" />
             </form>
             <p>Já se inscreveu? 
-                <Link to={"/login"}> Acesse</Link>
+                <Link to={"/login"}>  Acesse  </Link>
             </p>
             <FooterWhite />
           </div>

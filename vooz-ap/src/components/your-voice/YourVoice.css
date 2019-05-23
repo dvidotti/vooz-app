@@ -5,12 +5,31 @@
 }
 
 .full-page-black-scroll {
-  /* width: 100%; */
-  height: fit-content !important;
-  align-items: center;
-  box-sizing: content-box;
-  margin: 0;
+  width: 100vw;
+  height: 100%;
+  margin: auto;
   background-color: black;
+}
+
+
+.title-lesson{
+  font-size: 2em;
+  font-weight:100;
+  text-align:center;
+  margin: auto;
+  color:white;
+  padding-top: 12%;
+  }
+
+
+  
+.subtitle-lesson{
+  font-size: 1.2em;
+  font-weight:100;
+  text-align:center;
+  margin: auto;
+  
+
 }
 
 .user-value {
@@ -23,25 +42,46 @@
   margin-right:7%;
 }
 
+.user-value-border {
+  color:black;
+  background-color: #DDDBDB;
+  font-weight: 100;
+  font-size: 1.3em;
+  padding:2% 7%;
+  border: 1px solid #DDDBDB;
+  margin-left:7%;
+  margin-right:7%;
+  text-align: center;
+
+}
+
 .user-lesson {
   color: white;
   font-weight: 100;
-  font-size: 1.4em;
-  padding:3% 7%;
+  font-size: 1.3em;
+  padding:3% 14%;
+  text-align:center;
+  line-height: 140%;
+  margin-bottom: 5%;
 }
 
-.user-range {
+.user-lesson-border {
   color: white;
   font-weight: 100;
-  font-size: 1.4em;
-  padding:3% 7%;
+  font-size: 1.3em;
+  padding:2% 7%;
+  border: 1px solid white;
+  margin-left:7%;
+  margin-right:7%;
+  margin-bottom:7%;
+  text-align:center;
 }
+
+
 
 .video-box{
  display:block;
  margin: 5% 7%;
-
-
 }
 
 .white-logo {
@@ -49,12 +89,29 @@
 }
 
 .form-button {
-  margin: 3% 7%;
-  width: 20%;
-  height: 6vh;
-  font-size: 2em;
-  padding-top:2%;
-  padding-bottom:2%;
-  
+  margin: 8% 7% 10% 7%;
+  width: 30%;
+  font-size: 1.2em;
+  padding-top:3%;
+  padding-bottom:3%;
+  background-color: #DDDBDB;
+}
 
+.footer-yourvoice{
+  border: 1px solid white;
+}
+
+
+.resp-container {
+  position: relative;
+  overflow: hidden;
+  text-align:center;
+  margin-bottom:4%;
+}
+
+.logo-scroll{
+  margin-bottom:8%;
+  text-align: center;
+
+  
 }

@@ -4,10 +4,10 @@ import NavBarTransparent from '../navbar/NavBarTransparent'
 import FooterTransparent from '../footer/FooterTransparent'
 import Sound from 'react-sound'
 import axios from 'axios'
-import './High.css'
+import './Low.css'
 
 
-class High extends Component {
+class Breath extends Component {
   constructor(){
     super();
     this.state = {
@@ -23,9 +23,9 @@ class High extends Component {
   }
   
   getAudio() {
-    axios.get("http://localhost:5000/api/my-audios?high")
+    axios.get("http://localhost:5000/api/my-audios?breath")
     .then(resAudio =>{
-      const theAudio = resAudio.data[0].high
+      const theAudio = resAudio.data[0].breath
       this.setState({audio: theAudio});
     })
     .catch((err)=>{
@@ -36,11 +36,10 @@ class High extends Component {
   
   render() {
     if (this.state.rendered) {
-      return ( <Redirect to='/qintensity' />)
+      return ( <Redirect to='/q4' />)
      } else {
       return (
-        <div className='artist-page high'>
-          {this.state.audio && 
+        <div className='artist-page breath'> 
           <Sound 
               url={this.state.audio}
               playStatus={Sound.status.PLAYING}
@@ -60,4 +59,4 @@ class High extends Component {
 }
 
 
-export default High;
+export default Breath;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FormFour from '../forms/form-four/FormFour'
 import '../play/Play.css'
-import legend9 from '../../img/Legenda 9 Mobile.svg'
+import legend10 from '../../img/Legenda 10 Mobile.svg'
 import FooterWhite from '../footer/FooterWhite'
 
 class QMpb extends Component {
@@ -51,7 +51,7 @@ class QMpb extends Component {
           option4='/qwishes' 
           />
           <div className='legend-block-white'>
-           <img className="legend-white" src={legend9} alt="progress"/>
+           <img className="legend-white" src={legend10} alt="progress"/>
           </div>
           <div className='footer-white'>
             <FooterWhite /> 

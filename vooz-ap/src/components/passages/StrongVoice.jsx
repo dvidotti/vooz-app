@@ -1,13 +1,14 @@
 import React, { Component }from 'react'
 import { Redirect } from 'react-router-dom'
 import NavBarTransparent from '../navbar/NavBarTransparent'
+import legend10white from '../../img/Legenda 10 Mobile.svg'
 import FooterTransparent from '../footer/FooterTransparent'
 import Sound from 'react-sound'
 import axios from 'axios'
-import './High.css'
+import './Low.css'
 
 
-class High extends Component {
+class StrongVoice extends Component {
   constructor(){
     super();
     this.state = {
@@ -23,9 +24,9 @@ class High extends Component {
   }
   
   getAudio() {
-    axios.get("http://localhost:5000/api/my-audios?high")
+    axios.get("http://localhost:5000/api/my-audios?ella")
     .then(resAudio =>{
-      const theAudio = resAudio.data[0].high
+      const theAudio = resAudio.data[0].ella
       this.setState({audio: theAudio});
     })
     .catch((err)=>{
@@ -36,14 +37,14 @@ class High extends Component {
   
   render() {
     if (this.state.rendered) {
-      return ( <Redirect to='/qintensity' />)
+      return ( <Redirect to='/qair' />)
      } else {
       return (
-        <div className='artist-page high'>
+        <div className='artist-page strong-voice'>
           {this.state.audio && 
           <Sound 
               url={this.state.audio}
-              playStatus={Sound.status.PLAYING}
+              playStatus={Sound.status.STOPPED}
               autoLoad={true}
               // playFromPosition={300 /* in milliseconds */}
               onLoading={this.teste}
@@ -60,4 +61,4 @@ class High extends Component {
 }
 
 
-export default High;
+export default StrongVoice;

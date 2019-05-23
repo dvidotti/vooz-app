@@ -25,36 +25,39 @@
   padding: 8% 2%;
 }
 
-.answer1-box{
-  border: 1.5px solid white;
-  padding-top:3%;
-  padding-bottom:3%;
+.box-question-voice{
   font-weight: 100;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  margin: -4% 5% 5% 5%;
+  padding: 9% 5%;
+  border: 1px solid white; 
+  line-height: 1.5em; 
+}
+
+.answer1-box{
+  border-right: 3px solid black;
+  padding: 6%;
+  font-weight: 100;
+  font-size: 1.1em;
   border-right:none;
-  background-color:black;  
+  background-color:white;  
   flex-grow: 1;
   width:3vh;
-  color: white;
+  color: black;
 }
 
 .answer2-box{
-  border: 1.5px solid white;
-  padding-top:3%;
-  padding-bottom:3%;
+  border-left: 3px solid black;
+  padding:6%;
   font-weight: 100;
-  font-size: 1.2em;
-  background-color:black;  
+  font-size: 1.1em;
+  background-color:white;  
   flex-grow: 1;
   width:3vh;
-  color: white;
+  color: black;
 }
 
 
-/* .text-yourvoice {
-  padding:10px;   
-  border: 1px solid red;
-} */
 
 
 

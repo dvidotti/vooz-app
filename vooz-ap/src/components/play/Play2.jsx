@@ -49,8 +49,8 @@ class Play2 extends Component {
           <div className="next">
             <Link to='/q2'><img className='next-image' src={next} alt="next"/></Link>
           </div>
-          <div className='legend-block'>
-            <img className="legend" src={legend3} alt="progress"/>
+          <div className='legend-block-white'>
+            <img className="legend-white" src={legend3} alt="progress"/>
           </div>
         </div>
         <Footer />

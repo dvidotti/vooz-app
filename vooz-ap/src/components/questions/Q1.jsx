@@ -29,8 +29,8 @@ class Q1 extends Component {
       <div>
         <div className="full-page-white">
           <FormTwo getAnswer={this.getAnswer} label='O que você achou?' input1='Fácil' input2='Difícil' option1='/play2' option2='/play3'/>
-          <div className='legend-block2'>
-            <img className="legend2" src={legend2} alt="progress"/>
+          <div className='legend-block-white'>
+            <img className="legend-white" src={legend2} alt="progress"/>
           </div>
         </div>
         <Footer />  

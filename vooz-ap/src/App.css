@@ -8,6 +8,10 @@
   outline: none;
 }
 
+a{
+  color:rgb(216, 216, 236);
+}
+
 .App {
   margin:0;
   padding:0;

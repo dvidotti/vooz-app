@@ -39,7 +39,7 @@ class FormTwoBlack extends Component {
     return(
       <div className='full-page'>
         <NavBar />
-        <h1 className='box-question'>{this.props.label}</h1>
+        <h1 className='box-question-voice'>{this.props.label}</h1>
         <div className='answer-up-box'>
           <button className='answer1-box' onClick={this.statusSelect1}><p>{this.props.input1}</p></button> 
           <button className='answer2-box'  onClick={this.statusSelect2}><p>{this.props.input2}</p></button> 

@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import FormTwoBlack from '../forms/form-two/FormTwoBlack'
+import NavBarBlack from '../navbar/NavBarBlack'
 import '../../components/your-voice/YourVoice.css'
 import { Redirect } from 'react-router-dom'
 import AuthService from '../auth/auth-service';
 import instructions from '../../instructions.json';
-import logo from '../../img/Logo Branco@3x.png';
-
+import logoScroll from '../../img/Logo Branco.png'
 
 
 class Course1 extends Component {
@@ -69,12 +68,10 @@ class Course1 extends Component {
     this.service.logout()
     .then(() => {
       this.setState({ loggedInUser: false });
-     // this.props.getUser(null);  
     })
   }
 
   render() { 
-    console.log('STATECHECK', this.state.artistInstruction)
     if (this.state.loggedInUser === false) {
       return (
         <Redirect to="/login" />
@@ -82,19 +79,27 @@ class Course1 extends Component {
     } else {
       return(
         <div className="full-page-black-scroll">
-          <img className='white-logo' src={logo} alt='VoOZ Logo'/>
-          <h1 class='user-value'> O que descobrimos!</h1>
-          <h1 class='user-value'>Olá, {this.props.loggedInUser.username}</h1>
+          <NavBarBlack />
+          <hr className="line" />
+          <h1 class='title-lesson'>Olá, {this.props.loggedInUser.username}!</h1>
+          <h1 class='subtitle-lesson'> O que descobrimos sobre a sua voz.</h1>
           <h2 class='user-lesson'>{this.state.levelInstruction}</h2>
-          <h1 class='user-value'>{this.props.loggedInUser.range}</h1>
-          <h2 class='user-range'>{this.state.rangeInstruction}</h2>
-          <h1 class='user-value'>{this.props.loggedInUser.air}</h1>
-          <h2 class='user-range'>{this.state.airInstruction}</h2>
-          <h1 class='user-value'>{this.props.loggedInUser.style}: Uma canção para você se inspirar!</h1>
-          <iframe className="video-box" width="560" height="315" src={this.state.artistInstruction} />
-          <h1 class='user-value'> Uma dica para começar a cantar!  </h1>
-          <iframe className="video-box" width="560"  height="315" src={instructions.links[1]} />
+          <h1 class='user-value-border'>Voz {this.props.loggedInUser.range}</h1>
+          <h2 class='user-lesson-border'>{this.state.rangeInstruction}</h2>
+          <h1 class='user-value-border'>{this.props.loggedInUser.air} ;)</h1>
+          <h2 class='user-lesson-border'>{this.state.airInstruction}</h2>
+          <h1 class='user-value-border'>Então é {this.props.loggedInUser.style}! Se inspira </h1>
+          <div class="resp-container">
+            <iframe className="resp-container"  src={this.state.artistInstruction} />
+          </div>
+          <h1 class='user-value-border'>Comece, solte a voz!</h1>
+          <div class="resp-container">
+            <iframe className="resp-container" src={instructions.links[1]} />
+          </div>
           <button className='form-button' onClick={this.logoutUser} value='Logout' name='Logout'> Sair</button>
+          <div className="logo-scroll">
+            <img  src={logoScroll} alt="logo"/>
+          </div>
         </div>
       )
     }

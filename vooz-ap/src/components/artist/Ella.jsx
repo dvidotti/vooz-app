@@ -19,7 +19,7 @@ class Ella extends Component {
   }
 
   componentDidMount() {
-    window.setTimeout(()=> {this.setState({rendered:true})}, 15000)
+    window.setTimeout(()=> {this.setState({rendered:true})}, 8500)
     this.getAudio();
   }
   
@@ -54,9 +54,6 @@ class Ella extends Component {
           }
           <NavBarTransparent  className='artist-navbar'/>
           <button onClick={this.getAudio} className='central-artist'>Ella Fitzgerald</button>
-          <div className='legend-block1'>
-            <img className="legend1" src={legend10white} alt="progress"/>
-          </div>
           <FooterTransparent className='artist-footer' />
         </div>
       )

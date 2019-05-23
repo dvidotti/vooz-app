@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import FormTwoBlack from '../forms/form-two/FormTwoBlack'
 import '../forms/form-two/FormTwoBlack.css'
 import FooterWhite from '../footer/FooterWhite';
+import NavBarBlack from '../../components/navbar/NavBarBlack'
 
 
 class YourVoice extends Component {
@@ -22,14 +23,17 @@ class YourVoice extends Component {
   render() {
     return(
       <div className="full-page-black">
+        <NavBarBlack />
         <FormTwoBlack
-          label={`Parece que você é ${this.state.level} com aquela voz ${this.state.intensity} e quando canta todos falam que voz é ${this.state.range}. Você já fez sua primeira gravação e se quiser explorar mais o seu lado ${this.state.artist} e cantar melhor, comece aqui com nosso curso grátis.`}
+          label={`Cada voz é única, a sua voz ${this.state.range} é algo a se explorar nas suas interpretações. Ser ${this.state.level} é apenas um momento na sua história com o canto, a prática vai permitir você expressar cada vez mais esse canto que soa ${this.state.intensity}. Um dos seus estilos musicais preferidos é o ${this.state.style}  então se você quer cantar para ${this.state.wishes}, e explorar mais o seu lado ${this.state.artist}, salve seu perfil e descubra mais sobre sua voz`}
           input1='Salve seu perfil' 
-          input2='Faça o curso grátis' 
+          input2='Sua VoOZ' 
           option1='/signup' 
           option2='/singup'
         />
-       <FooterWhite />
+        <div className="footer-yourvoice">
+          <FooterWhite />
+        </div>
       </div>
     )
   }

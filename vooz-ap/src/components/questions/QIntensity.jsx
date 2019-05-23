@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FormTwo from '../forms/form-two/FormTwo'
 import '../play/Play.css'
-import legend4 from '../../img/Legenda 4 Mobile.svg'
+import legend6 from '../../img/Legenda 6 Mobile.svg'
 import Footer from '../footer/Footer' 
 
 
@@ -32,14 +32,14 @@ class QIntensity extends Component {
           <FormTwo 
             intensity
             getAnswerIntensity= {this.getAnswerIntensity}
-            label='Quando você canta sai?' 
+            label='Você quando canta sai?' 
             input1='Baixinho' 
             input2='Vozeirão' 
-            option1='/qair' 
-            option2='/qair'
+            option1='/qlight' 
+            option2='/qstrong'
           />
-          <div className='legend-block-black'>
-            <img className="legend-black" src={legend4} alt="progress"/>
+          <div className='legend-block-white'>
+            <img className="legend-white" src={legend6} alt="progress"/>
           </div>
           <Footer /> 
         </div>

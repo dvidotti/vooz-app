@@ -1,18 +1,23 @@
 
 
 .text {
-  margin-top: 4%;
   font-weight: 100;
+  font-size: 1.6em;
+  margin:32% auto 5%; 
+  padding-bottom:8%;
+  width:70%;
+  display: flex;
+  justify-content: center; 
 }
 
 .next{
-  margin-top:2%;  
-  margin-left: 50%;
-  width: 30%;  
+  margin-top:5%;  
+  margin-left: 60%;
+  width: 40%;  
 }
 
 .next-image{
-  width:20%;
+  width:45%;
 }
 
 .btn-play{
@@ -22,7 +27,7 @@
 }
 
 .play-button{
-  width: 12%;
+  width: 37%;
 }
 
 .legend-block-black{
@@ -37,7 +42,6 @@
   margin: auto;
   width:100%;
   display:block;
-  border:1px solid red;
   position: absolute;
   bottom:15%;
   z-index: 0;  
