@@ -15,8 +15,8 @@ class QAir extends Component {
   }
 
     getAnswerAir(value) {
-      const faltaAr = 'Nem sempre a falta de ar ao cantar é por causa da sua respiração, a maneira como você usa o ar também pode causar essa sensação';
-      const sobraAr = 'A respiração é onde começa o canto, se você não sente falta de ar ao cantar é um bom sinal, mas ainda dá pra falar muito sobre e melhoara a forma que você pensa sua respiração ;-)';
+      const faltaAr = 'Falta Ar';
+      const sobraAr = 'Sobra Ar';
       if(value === 2) {
         this.setState({air: faltaAr }, () => {
           this.props.getAir(this.state.air);
@@ -42,8 +42,8 @@ class QAir extends Component {
             option1='/q4' 
             option2='/q4'
           />
-          <div className='legend-block'>
-            <img className="legend" src={legend4} alt="progress"/>
+          <div className='legend-block-black'>
+            <img className="legend-black" src={legend4} alt="progress"/>
           </div>
           <Footer /> 
         </div>

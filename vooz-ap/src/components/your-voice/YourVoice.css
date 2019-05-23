@@ -5,11 +5,56 @@
 }
 
 .full-page-black-scroll {
-  border: 5px solid red;
   /* width: 100%; */
   height: fit-content !important;
   align-items: center;
   box-sizing: content-box;
   margin: 0;
   background-color: black;
+}
+
+.user-value {
+  color: white;
+  font-weight: 100;
+  font-size: 3em;
+  padding:2% 7%;
+  border: 1px solid white;
+  margin-left:7%;
+  margin-right:7%;
+}
+
+.user-lesson {
+  color: white;
+  font-weight: 100;
+  font-size: 1.4em;
+  padding:3% 7%;
+}
+
+.user-range {
+  color: white;
+  font-weight: 100;
+  font-size: 1.4em;
+  padding:3% 7%;
+}
+
+.video-box{
+ display:block;
+ margin: 5% 7%;
+
+
+}
+
+.white-logo {
+  padding:3% 7%;
+}
+
+.form-button {
+  margin: 3% 7%;
+  width: 20%;
+  height: 6vh;
+  font-size: 2em;
+  padding-top:2%;
+  padding-bottom:2%;
+  
+
 }

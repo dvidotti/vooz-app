@@ -18,21 +18,14 @@
 .btn-play{
   width: 70%;
   margin-top:3%;
+
 }
 
 .play-button{
   width: 12%;
 }
 
-.legend-block1{
-  display: block;
-  margin: auto;
-  align-items: center;
-  width:15%;
-  margin-top:0%;
-}
-
-.legend-block2{
+.legend-block-black{
   display: block;
   margin: auto;
   align-items: center;
@@ -40,35 +33,24 @@
   margin-top:10%;
 }
 
-.legend-block3{
-  display: block;
+.legend-block-white{
   margin: auto;
-  align-items: center;
-  width:15%;
-  margin-top:0%;
-}
-
-.legend-block4{
-  display: block;
-  margin: auto;
-  align-items: center;
-  width:15%;
-  margin-top:0%;
-}
-
-
-.legend1 {
-  margin: auto;
-  align-items: center;
-  width: 15%;
-  margin-bottom:6%;
-  display: block;
+  width:100%;
+  display:block;
+  border:1px solid red;
   position: absolute;
-  bottom:5%;
-  z-index: -1;
+  bottom:15%;
+  z-index: 0;  
 }
 
-.legend2{
+
+.legend-white {
+  width: 30%;
+  bottom:10%;
+  z-index: 0;  
+}
+
+.legend-black {
   margin: auto;
   align-items: center;
   width: 15%;
@@ -80,30 +62,7 @@
 }
 
 
-.legend3 {
-  margin: auto;
-  align-items: center;
-  width: 15%;
-  margin-bottom:6%;
-  display: block;
-  position: absolute;
-  bottom:5%;
-  z-index: -1;
-}
-
-.legend4 {
-  margin: auto;
-  align-items: center;
-  width: 15%;
-  margin-bottom:6%;
-  display: block;
-  position: absolute;
-  bottom:5%;
-  z-index: -1;
-}
-
-
-@media  (max-width: 750px) {
+@media  (min-width: 768px) {
   .text {
     padding-top: 35%;
     font-weight: 100;
@@ -123,23 +82,40 @@
     margin-top:15%;
   }
 
-  .legend-block {
+  .legend-block-black {
     display: block;
-    margin: auto;
+    margin: auto; 
     align-items: center;
     width:40%;
-    margin-top:20%;
   }
 
-  .legend{
+  .legend-black{
     margin: auto;
     align-items: center;
     width: 40%;
     margin-bottom:15%;
     display: block;
     position: absolute;
-    bottom:5%;
+    bottom:0%;
     z-index: -1;
+  }
+
+  .legend-block-white {
+    display: block;
+    margin: auto;
+    align-items: center;
+    width:40%;
+    /* margin-top:20%; */
+  }
+
+  .legend-white{
+    margin: auto;
+    align-items: center;
+    width: 40%;
+    display: block;
+    /* position: absolute;
+    bottom:5%;
+    z-index: -1; */
   }
 }
 

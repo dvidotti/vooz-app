@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import FormFour from '../forms/form-four/FormFour'
 import './Q.css'
+import legend9 from '../../img/Legenda 9 Mobile.svg'
+import FooterWhite from '../footer/FooterWhite'
 
 class QPop extends Component {
   constructor(props) {
@@ -48,6 +50,12 @@ class QPop extends Component {
         option3='/qwishes' 
         option4='/qwishes' 
         />
+        <div className='legend-block-white'>
+           <img className="legend-white" src={legend9} alt="progress"/>
+          </div>
+          <div className='footer-white'>
+            <FooterWhite /> 
+          </div>
       </div>
     )
   }

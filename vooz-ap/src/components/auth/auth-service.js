@@ -14,8 +14,9 @@ class AuthService {
     .then(response => response.data)
   }
 
-  signup = (username, password, level, range, air, style, record, artist, wishes ) => {
-    return this.service.post('/signup', {username, password, level, range, air, style, record, artist, wishes})
+  signup = (username, password, level, range, intensity, air, style, record, artist, wishes, email, name ) => {
+    const obj = {username, password, level, range, intensity, air, style, record, artist, wishes, email, name};
+    return this.service.post('/signup', obj)
     .then(response => response.data)
   }
 

@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const myVoiceSchema = new Schema({
+  username: String,
+  password: String,
   level: String,
   range: String,
   intensity: String,
@@ -13,8 +15,6 @@ const myVoiceSchema = new Schema({
   wishes: String,
   email: String,
   name: String,
-  username: String,
-  password: String,
 });
 
 const MyVoice = mongoose.model('MyVoice', myVoiceSchema);

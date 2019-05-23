@@ -18,9 +18,11 @@ authRoutes.post('/logout', (req, res, next) => {
 
 
 authRoutes.get('/loggedin', (req, res, next) => {
+  console.log('entrou no logged in')
 // req.isAuthenticated() is defined by passport
   if (req.isAuthenticated()) {
-    res.status(200).json(req.MyVoice);
+    console.log('caiu no true do loggedin', req.user)
+    res.status(200).json(req.user);
     return;
   }
   res.status(403).json({ message: 'Unauthorized' });

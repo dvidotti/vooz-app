@@ -11,12 +11,15 @@ position: relative;
 }
 
 .footer-button-white{ 
-  padding-top:9%; 
-  padding-bottom: 4%;
+  padding-top:2%; 
   width: 100%;
   position: relative;
   background-color: black;
-  height: 5vh;
+}
+
+.logo-white-image{
+  width: 5%;
+  padding-bottom:3%;
 }
 
 .footer-transparent{ 
@@ -45,6 +48,16 @@ position: relative;
 }
 
 .logo-white-image{
-  width: 15%;
+  width: 12%;
 }
+
   
+
+@media (min-width: 768px){
+
+
+  .logo-white-image{
+    width: 5%;
+  }
+
+}

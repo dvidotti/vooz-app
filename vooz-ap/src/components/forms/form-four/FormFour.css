@@ -6,40 +6,30 @@
     width:100%;
   }
   
-  .answer-up-box-black {
+  .answer-up-box-black,
+  .answer-bottom-box-black{
     display:flex;
-    margin:0% 5%;
-    width:70%;
-  }
-  
-  .answer-bottom-box-black {
-    display:flex;
-    margin:0% 5%;
-    width:70%;
+    margin:0 auto;
+    width:90%;
   }
   
   
   .box-question-black {
     font-weight: 100;
     font-size: .8em;
-    margin-left:0%;
-    margin-right:0%;
+    margin:27% auto 5%; 
     padding-bottom:8%;
-    width:70%;
+    width:60%;
     display: flex;
     justify-content: center; 
   }
-
-  .box-question-black > h1 {
-    align-self: auto;
-  } 
   
   .answer1-box-black {
     border: 1.5px solid white;
     margin-left:0%;
     margin-right:0%;
-    padding-top:7%;
-    padding-bottom:7%;
+    padding-top:8%;
+    padding-bottom:8%;
     font-weight: 100;
     font-size: 1.2em;
     border-right:none;
@@ -54,8 +44,8 @@
     border: 1.5px solid white;
     margin-left:0%;
     margin-right:0%;
-    padding-top:7%;
-    padding-bottom:7%;
+    padding-top:8%;
+    padding-bottom:8%;
     font-weight: 100;
     font-size: 1.2em;
     border-bottom: none;
@@ -125,46 +115,23 @@
 
 
 
-@media (max-width: 750px){
+@media (min-width: 768px){
 
-  
-  /* .full-page-black{
-    background-color: black;
-    color: white; 
-    margin:0;
-    border: 1px solid black;
-    width:100%;
-  } */
-  
-  .answer-up-box-black {
-    display:flex;
-    margin:0% 5%;
-    width:70%;
-  }
-  
-  .answer-bottom-box-black {
-    display:flex;
-    margin:0% 5%;
-    width:70%;
-  }
   
   
   .box-question-black {
     font-weight: 100;
-    font-size: .8em;
-    /* margin-left:5%;
-    margin-right:5%; */
-    margin-top:20%; 
-    padding-top:8%;
-    padding-bottom:8%;
-    width:70%;
-    display: flex;
-    justify-content: center; 
+    font-size: 1em;
+    margin:5% auto 0; 
+    padding-bottom: 4%;
+    width:20%;
   }
 
-  /* .box-question-black > h1 {
-    align-self: auto;
-  } */
+
+  .answer-up-box-black, .answer-bottom-box-black {
+    width: 40%;
+    font-size: 1.5em;
+}
   
   .answer1-box-black {
     border: 1.5px solid white;

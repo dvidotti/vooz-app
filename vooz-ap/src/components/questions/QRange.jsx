@@ -35,11 +35,11 @@ class QRange extends Component {
           label='Você acha sua voZ?' 
           input1='Grave' 
           input2='Aguda' 
-          option1='/qintensity' 
-          option2='/qintensity'
+          option1='/low' 
+          option2='/high'
         />
-        <div className='legend-block'>
-          <img className="legend" src={legend4} alt="progress"/>
+        <div className='legend-block-black'>
+          <img className="legend-black" src={legend4} alt="progress"/>
         </div>
         <Footer /> 
       </div>

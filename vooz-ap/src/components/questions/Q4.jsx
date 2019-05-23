@@ -41,7 +41,7 @@ class Q4 extends Component {
         <div className="full-page-black">
           <FormFour 
           getAnswerFour={this.getAnswerFour}
-          label='Falando de estílo? Você prefere?' 
+          label='Falando de estilo, você prefere?' 
           input1='Jazz' 
           input2='Rock' 
           input3='Pop'
@@ -51,8 +51,8 @@ class Q4 extends Component {
           option3='/qpop'
           option4='/qmpb' 
           />
-          <div className='legend-block'>
-            <img className="legend" src={legend9} alt="progress"/>
+          <div className='legend-block-white'>
+            <img className="legend-white" src={legend9} alt="progress"/>
           </div>
           <div className='footer-white'>
             <FooterWhite /> 

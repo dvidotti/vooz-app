@@ -21,6 +21,8 @@ import Course1 from './components/your-voice/Course1'
 import SignUp from './components/auth/SignUp'
 import LogIn from './components/auth/LogIn'
 import Ella from './components/artist/Ella'
+import Low from './components/passages/Low'
+import High from './components/passages/High'
 import ProtectedRoute from './components/auth/protected-route'
 import AuthService from './components/auth/auth-service';
 
@@ -95,6 +97,7 @@ class App extends Component {
         }) 
       })
       .catch( err =>{
+        console.log('caiu no catch =>>>>', err)
         this.setState({
           loggedInUser:  false
         }) 
@@ -110,12 +113,15 @@ class App extends Component {
 
 
   render(){
-    {this.fetchUser()}
+    console.log('ARRENHA', this.state)
+    this.fetchUser();
+    console.log(this.state.loggedInUser)
     if(this.state.loggedInUser){ 
       return (
         <Switch>
+           <Route path='/login' render={(props) => <LogIn userInfo={this.state} getUser={this.getTheUser} /> } />
+          <Route exact path='/' component={Home} />
           <ProtectedRoute path='/course1' user={this.state.loggedInUser} userInfo={this.state} component={Course1} />
-          <ProtectedRoute path='/signup' render={(props) => <SignUp userInfo={this.state} getUser={this.getTheUser} /> } />
         </Switch>
       ) 
     } else {
@@ -143,6 +149,8 @@ class App extends Component {
               <Route path='/signup' render={(props) => <SignUp userInfo={this.state} getUser={this.getTheUser} /> } />
               <Route path='/login' render={(props) => <LogIn userInfo={this.state} getUser={this.getTheUser} /> } />
               <Route path='/ella' component={Ella} />
+              <Route path='/low' component={Low} />
+              <Route path='/high' component={High} />
             </Switch>
         </div>
       )

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import NavBar from '../../navbar/NavBar'
+import NavBarBlack from '../../navbar/NavBarBlack'
 import '../form-four/FormFour.css'
 
 
@@ -96,18 +96,18 @@ class FormFour extends Component {
     return(
       <div className='full-page-black'>
         <div className='navbar-white'>
-          <NavBar />
+          <NavBarBlack />
         </div>
         <div className='box-question-black'>
            <h1 >{this.props.label}</h1>
         </div>
         <div className='answer-up-box-black '>
-          <button className='answer1-box-black ' onClick={this.statusSelect1}><p>{this.props.input1}</p></button> 
-          <button className='answer2-box-black '  onClick={this.statusSelect2}><p>{this.props.input2}</p></button> 
+          <button className='answer1-box-black ' onClick={this.statusSelect1}><p className="text-button-form">{this.props.input1}</p></button> 
+          <button className='answer2-box-black '  onClick={this.statusSelect2}><p className="text-button-form">{this.props.input2}</p></button> 
         </div>
         <div className='answer-bottom-box-black '>
-          <button className='answer3-box-black '  onClick={this.statusSelect3}><p>{this.props.input3}</p></button> 
-          <button className='answer4-box-black '  onClick={this.statusSelect4}><p>{this.props.input4}</p></button> 
+          <button className='answer3-box-black '  onClick={this.statusSelect3}><p className="text-button-form">{this.props.input3}</p></button> 
+          <button className='answer4-box-black '  onClick={this.statusSelect4}><p className="text-button-form">{this.props.input4}</p></button> 
         </div>
       </div>
     )

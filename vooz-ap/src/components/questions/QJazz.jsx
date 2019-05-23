@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import FormFour from '../forms/form-four/FormFour'
 import './Q.css'
+import FooterWhite from '../footer/FooterWhite'
+import legend9 from '../../img/Legenda 9 Mobile.svg'
+
 
 class QJazz extends Component {
   constructor(props) {
@@ -47,6 +50,12 @@ class QJazz extends Component {
         option3='/qwishes' 
         option4='/qwishes' 
         />
+        <div className='legend-block-white'>
+            <img className="legend-white" src={legend9} alt="progress"/>
+          </div>
+          <div className='footer-white'>
+            <FooterWhite /> 
+          </div>
       </div>
     )
   }

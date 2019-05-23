@@ -38,8 +38,8 @@ class QIntensity extends Component {
             option1='/qair' 
             option2='/qair'
           />
-          <div className='legend-block'>
-            <img className="legend" src={legend4} alt="progress"/>
+          <div className='legend-block-black'>
+            <img className="legend-black" src={legend4} alt="progress"/>
           </div>
           <Footer /> 
         </div>

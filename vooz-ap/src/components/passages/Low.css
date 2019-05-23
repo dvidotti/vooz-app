@@ -1,0 +1,30 @@
+.low {
+  background-color: #060E9F;
+  background-image: url("../../img/back_grave.png");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center top;
+}
+
+.artist-footer{
+  background-color: transparent;
+}
+
+
+.artist-navbar{
+  margin-top: 40%;
+}
+
+
+@media (max-width: 768px) {
+  .low {
+    background-color: #060E9F;
+    background-image: url("../../img/back_grave.png");
+    width: 100%;
+    height: 100vh;
+    background-size: contain;
+    background-position: center top;
+  }
+
+}
