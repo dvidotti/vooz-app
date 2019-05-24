@@ -22,7 +22,7 @@ class Play3 extends Component {
   getAudio() {
     axios.get("http://localhost:5000/api/my-audios")
     .then(resAudio =>{
-      const theAudio = resAudio.data[0].audio_three;
+      const theAudio = resAudio.data[0].audio_one;
 
       this.setState({audio: theAudio});
 

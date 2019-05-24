@@ -10,7 +10,7 @@ const MyVoice = require('../models/my-voice');
 // POST
 
 router.post('/my-audios', (req, res, next) => {
-  const { audio_one, audio_two, audio_three, audio_four, ella, low, high, breath } = req.body;
+  const { audio_one, audio_two, audio_three, audio_four, ella, low, high, breath, strong, light } = req.body;
 
   const newAudioCollection = new Content({
     audio_one,
@@ -21,6 +21,8 @@ router.post('/my-audios', (req, res, next) => {
     low,
     high,
     breath,
+    strong,
+    light,
 
   });
 

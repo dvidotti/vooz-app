@@ -52,8 +52,9 @@ class Ella extends Component {
               onFinishedPlaying={this.handleSongFinishedPlaying}
             />
           }
-          <button onClick={this.getAudio} className='central-artist'>Ella Fitzgerald</button>
-          <FooterTransparent className='artist-footer' />
+          <div>
+            <button onClick={this.getAudio} className='central-artist'>Ella Fitzgerald</button>
+          </div>
         </div>
       )
     }

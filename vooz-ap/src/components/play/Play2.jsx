@@ -22,7 +22,7 @@ class Play2 extends Component {
   getAudio() {
     axios.get("http://localhost:5000/api/my-audios")
     .then(resAudio =>{
-      const theAudio = resAudio.data[0].audio_two;
+      const theAudio = resAudio.data[0].audio_three;
       this.setState({audio: theAudio});
 
     })
@@ -30,7 +30,7 @@ class Play2 extends Component {
       console.log(err)
     })
   }
-  
+   
   render() {
     return (
       <div>

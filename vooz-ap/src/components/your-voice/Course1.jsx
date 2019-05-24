@@ -81,7 +81,7 @@ class Course1 extends Component {
         <div className="full-page-black-scroll">
           <NavBarBlack />
           <div className="scroll-course1">
-            <hr className="line" />
+            <hr className="line-course1" />
             <h1 class='title-lesson'>Olá, {this.props.loggedInUser.username}!</h1>
             <h1 class='subtitle-lesson'> O que descobrimos sobre a sua voz.</h1>
             <h2 class='user-lesson'>{this.state.levelInstruction}</h2>

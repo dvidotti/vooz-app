@@ -11,6 +11,8 @@ const contentSchema = new Schema({
   low: String,
   high: String,
   breath: String,
+  strong: String,
+  light: String,
 });
 
 const Content = mongoose.model('Content', contentSchema);

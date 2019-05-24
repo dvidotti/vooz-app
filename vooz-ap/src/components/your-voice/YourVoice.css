@@ -83,12 +83,12 @@
 }
 
 .form-button {
-  margin: 8% 7% 10% 7%;
+  margin: 3% 7% 15% 7%;
   width: 30%;
   font-size: 1.2em;
   padding-top:3%;
   padding-bottom:3%;
-  background-color: #DDDBDB;
+  background-color: white;
 }
 
 .footer-yourvoice{
@@ -168,7 +168,7 @@
     font-size: 1.8em;
     font-weight:100;
     text-align:center;
-    margin: 6% auto;
+    margin: 6% auto 0%;
     color:white;
     padding:5% 25%;
   }
@@ -180,5 +180,29 @@
   .signup-link {
     margin: auto;
   }
+
+
+  /* .line-course1 {
+    border-bottom:1px solid white;
+    width:80%;
+    margin: auto;
+    padding-bottom:0%;
+  } */
+
+  /* .title-lesson{
+    font-size: 2em;
+    font-weight:100;
+    text-align:center;
+    margin: auto;
+    color:white;
+    padding-top: 8%;
+    } */
+
+    /* .subtitle-lesson{
+      font-size: 1.8em;
+      font-weight:100;
+      text-align:center;
+      margin:3% auto 0%;
+    } */
 
 }

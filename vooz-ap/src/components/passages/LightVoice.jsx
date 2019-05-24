@@ -19,14 +19,14 @@ class LightVoice extends Component {
   }
 
   componentDidMount() {
-    window.setTimeout(()=> {this.setState({rendered:true})}, 2000)
+    window.setTimeout(()=> {this.setState({rendered:true})}, 4500)
     this.getAudio();
   }
   
   getAudio() {
-    axios.get("http://localhost:5000/api/my-audios?ella")
+    axios.get("http://localhost:5000/api/my-audios")
     .then(resAudio =>{
-      const theAudio = resAudio.data[0].ella
+      const theAudio = resAudio.data[0].light
       this.setState({audio: theAudio});
     })
     .catch((err)=>{
@@ -44,7 +44,7 @@ class LightVoice extends Component {
           {this.state.audio && 
           <Sound 
               url={this.state.audio}
-              playStatus={Sound.status.STOPPED}
+              playStatus={Sound.status.PLAYING}
               autoLoad={true}
               // playFromPosition={300 /* in milliseconds */}
               onLoading={this.teste}
