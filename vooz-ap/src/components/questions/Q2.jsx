@@ -30,16 +30,18 @@ class Q2 extends Component {
       console.log('PropsQ2', this.props)
       console.log('StateQ2', this.state )
       return(
-        <div className="full-page-white">
-          <FormTwo 
-          getAnswer= {this.getAnswer}
-          label='E agora como foi?' 
-          input1='Fácil' 
-          input2='Difícil' 
-          option1='/qRange' 
-          option2='/qRange'/>
-          <div className='legend-block-white'>
-            <img className="legend-white" src={legend4} alt="progress"/>
+        <div>
+          <div className="full-page-white">
+            <FormTwo 
+            getAnswer= {this.getAnswer}
+            label='E agora como foi?' 
+            input1='Fácil' 
+            input2='Difícil' 
+            option1='/qRange' 
+            option2='/qRange'/>
+            <div className='legend-block-white'>
+              <img className="legend-white" src={legend4} alt="progress"/>
+            </div>
           </div>
           <Footer /> 
         </div>

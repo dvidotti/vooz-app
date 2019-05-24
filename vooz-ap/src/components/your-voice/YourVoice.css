@@ -31,8 +31,6 @@
   font-weight:100;
   text-align:center;
   margin: auto;
-  
-
 }
 
 .user-value {
@@ -107,7 +105,80 @@
 
 .logo-scroll{
   margin-bottom:8%;
-  text-align: center;
+  text-align: center;  
+}
 
-  
+.signup-link {
+  display:block;
+  margin:auto;
+}
+
+/* ///// DESKTOP ////// */
+
+@media (min-width: 768px){
+
+  .user-value {
+    color: white;
+    font-weight: 100;
+    font-size: 3em;
+    padding:2% 7%;
+    border: 1px solid white;
+    margin-left:20%;
+    margin-right:20%;
+  }
+
+  .full-page-black-scroll {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: black;
+  }
+
+  .resp-container {
+    position: relative;
+    overflow: hidden;
+    text-align:center;
+    height:40vh;
+    width:90%;
+    margin:auto;
+  }
+
+  .user-lesson {
+    color: white;
+    font-weight: 100;
+    font-size: 1.3em;
+    padding:5% 14%;
+    text-align:center;
+    line-height: 140%;
+    margin-bottom: 5%;
+  }
+
+  .user-lesson-border {
+    color: white;
+    font-weight: 100;
+    font-size: 1.3em;
+    padding:7% 13%;
+    border: 1px solid white;
+    margin-left:7%;
+    margin-right:7%;
+    margin-bottom:7%;
+    text-align:center;
+  }
+  .subtitle-lesson{
+    font-size: 1.8em;
+    font-weight:100;
+    text-align:center;
+    margin: 6% auto;
+    color:white;
+    padding:5% 25%;
+  }
+
+  .scroll-course1 {
+    padding:1% 30%;
+  }
+
+  .signup-link {
+    margin: auto;
+  }
+
 }

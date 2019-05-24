@@ -39,18 +39,19 @@ class Breath extends Component {
       return ( <Redirect to='/q4' />)
      } else {
       return (
-        <div className='artist-page breath'> 
-          <Sound 
-              url={this.state.audio}
-              playStatus={Sound.status.PLAYING}
-              autoLoad={true}
-              // playFromPosition={300 /* in milliseconds */}
-              onLoading={this.teste}
-              onPlaying={this.handleSongPlaying}
-              onFinishedPlaying={this.handleSongFinishedPlaying}
-            />
-          }
-          <NavBarTransparent  className='artist-navbar'/>
+        <div>
+          <div className='artist-page breath'> 
+            <Sound 
+                url={this.state.audio}
+                playStatus={Sound.status.PLAYING}
+                autoLoad={true}
+                // playFromPosition={300 /* in milliseconds */}
+                onLoading={this.teste}
+                onPlaying={this.handleSongPlaying}
+                onFinishedPlaying={this.handleSongFinishedPlaying}
+              />
+            }
+          </div>
           <FooterTransparent className='artist-footer' />
         </div>
       )

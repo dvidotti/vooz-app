@@ -65,5 +65,50 @@
 
 /* /////// DESKTOP /////////// */
 
+@media (min-width: 768px) {
+  .box-question-voice{
+    font-weight: 100;
+    font-size: 1.6em;
+    margin: -8% 5% 5% 5%;
+    padding: 6% 9%;
+    border: 1px solid white; 
+    line-height: 1.5em; 
+  }
 
+  .answer1-box{
+    border-right: 3px solid black;
+    padding: 5% 7%;
+    font-weight: 100;
+    font-size: 1.5em;
+    border-right:none;
+    background-color:white;  
+    flex-grow: 1;
+    width:45%;
+    color: black;
+  }
 
+  .answer2-box{
+    border-left: 3px solid black;
+    padding:5% 7%;
+    font-weight: 100;
+    font-size: 1.5em;
+    background-color:white;  
+    flex-grow: 1;
+    width:45%;
+    color: black;
+  }
+
+  .full-page-black{
+    background-color: black;
+    color: white; 
+    height: 100%;
+    width:100%;
+  }
+
+  .full-page{
+    background-color: black;
+    color: white; 
+    height: 80vh;
+    width: 50%;
+  }
+}

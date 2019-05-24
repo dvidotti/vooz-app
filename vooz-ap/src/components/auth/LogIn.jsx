@@ -55,9 +55,11 @@ class Login extends Component {
             <input className='form-input' name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
             <input className='form-buttom' type="submit" value="Login" />
           </form>
+          <div className="sign-up-link">
           <p>Não se inscreveu? 
               <Link to={"/signup"}>Signup</Link>
           </p>
+          </div>
           <FooterWhite />
         </div>
       )

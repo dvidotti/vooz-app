@@ -78,7 +78,7 @@ class SignUp extends Component {
               <input className='form-input' name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
               <input className='form-buttom' type="submit" value="Se inscreva" />
             </form>
-            <p>Já se inscreveu? 
+            <p className="conditional">Já se inscreveu? 
                 <Link to={"/login"}>  Acesse  </Link>
             </p>
             <FooterWhite />

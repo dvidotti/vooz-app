@@ -59,6 +59,8 @@
 
   .logo-white-image{
     width: 12%;
+    display:block;
+    margin:auto;
   }
 }
 
@@ -83,4 +85,19 @@
     width:30%;
     position: relative;
   }
+
+  .footer-button-white-voice{ 
+    padding-bottom:3%; 
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    background-color: black;
+  }
+
+  .logo-white-image{
+    width: 6%;
+    display: block;
+    margin: auto;
+  }
+
 }

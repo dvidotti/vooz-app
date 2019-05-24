@@ -80,25 +80,27 @@ class Course1 extends Component {
       return(
         <div className="full-page-black-scroll">
           <NavBarBlack />
-          <hr className="line" />
-          <h1 class='title-lesson'>Olá, {this.props.loggedInUser.username}!</h1>
-          <h1 class='subtitle-lesson'> O que descobrimos sobre a sua voz.</h1>
-          <h2 class='user-lesson'>{this.state.levelInstruction}</h2>
-          <h1 class='user-value-border'>Voz {this.props.loggedInUser.range}</h1>
-          <h2 class='user-lesson-border'>{this.state.rangeInstruction}</h2>
-          <h1 class='user-value-border'>{this.props.loggedInUser.air} ;)</h1>
-          <h2 class='user-lesson-border'>{this.state.airInstruction}</h2>
-          <h1 class='user-value-border'>Então é {this.props.loggedInUser.style}! Se inspira </h1>
-          <div class="resp-container">
-            <iframe className="resp-container"  src={this.state.artistInstruction} />
-          </div>
-          <h1 class='user-value-border'>Comece, solte a voz!</h1>
-          <div class="resp-container">
-            <iframe className="resp-container" src={instructions.links[1]} />
-          </div>
-          <button className='form-button' onClick={this.logoutUser} value='Logout' name='Logout'> Sair</button>
-          <div className="logo-scroll">
-            <img  src={logoScroll} alt="logo"/>
+          <div className="scroll-course1">
+            <hr className="line" />
+            <h1 class='title-lesson'>Olá, {this.props.loggedInUser.username}!</h1>
+            <h1 class='subtitle-lesson'> O que descobrimos sobre a sua voz.</h1>
+            <h2 class='user-lesson'>{this.state.levelInstruction}</h2>
+            <h1 class='user-value-border'>Voz {this.props.loggedInUser.range}</h1>
+            <h2 class='user-lesson-border'>{this.state.rangeInstruction}</h2>
+            <h1 class='user-value-border'>{this.props.loggedInUser.air} ;)</h1>
+            <h2 class='user-lesson-border'>{this.state.airInstruction}</h2>
+            <h1 class='user-value-border'>Então é {this.props.loggedInUser.style}! Se inspira </h1>
+            <div class="resp-container">
+              <iframe className="resp-container"  src={this.state.artistInstruction} />
+            </div>
+            <h1 class='user-value-border'>Comece, solte a voz!</h1>
+            <div class="resp-container">
+              <iframe className="resp-container" src={instructions.links[1]} />
+            </div>
+            <button className='form-button' onClick={this.logoutUser} value='Logout' name='Logout'> Sair</button>
+            <div className="logo-scroll">
+              <img className="logo-scroll" src={logoScroll} alt="logo"/>
+            </div>
           </div>
         </div>
       )
