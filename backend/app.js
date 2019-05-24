@@ -18,7 +18,7 @@ require('./configs/passport');
 // MONGOOSE
 
 mongoose
-  .connect('mongodb://localhost/backend', { useNewUrlParser: true })
+  .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`);
   })
@@ -82,5 +82,9 @@ const router = require('./routes/post-routes');
 app.use('/api/', authRoutes);
 app.use('/api/', router);
 
+app.use((req, res, next) => {
+  // If no routes match, send them the React HTML.
+  res.sendFile(__dirname + "/public/index.html");
+});
 
 module.exports = app;
