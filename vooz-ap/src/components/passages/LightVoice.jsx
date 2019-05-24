@@ -52,8 +52,6 @@ class LightVoice extends Component {
               onFinishedPlaying={this.handleSongFinishedPlaying}
             />
           }
-          <NavBarTransparent  className='artist-navbar'/>
-          <FooterTransparent className='artist-footer' />
         </div>
       )
     }

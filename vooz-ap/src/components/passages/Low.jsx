@@ -1,7 +1,6 @@
 import React, { Component }from 'react'
 import { Redirect } from 'react-router-dom'
 import NavBarTransparent from '../navbar/NavBarTransparent'
-import legend10white from '../../img/Legenda 10 Mobile.svg'
 import FooterTransparent from '../footer/FooterTransparent'
 import Sound from 'react-sound'
 import axios from 'axios'
@@ -19,7 +18,7 @@ class Low extends Component {
   }
 
   componentDidMount() {
-    window.setTimeout(()=> {this.setState({rendered:true})}, 3000)
+    window.setTimeout(()=> {this.setState({rendered:true})}, 6000)
     this.getAudio();
   }
   
@@ -51,8 +50,6 @@ class Low extends Component {
               onFinishedPlaying={this.handleSongFinishedPlaying}
             />
           }
-          <NavBarTransparent  className='artist-navbar'/>
-          <FooterTransparent className='artist-footer' />
         </div>
       )
     }

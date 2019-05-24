@@ -114,16 +114,14 @@
   }
 
 
-
+/* //////// DESKTOP /////////////// */
 
 @media (min-width: 768px){
-
-  
   
   .box-question-black {
     font-weight: 100;
     font-size: 1em;
-    margin:5% auto 0; 
+    margin:2% auto 0; 
     padding-bottom: 4%;
     width:20%;
   }

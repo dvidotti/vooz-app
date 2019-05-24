@@ -16,7 +16,7 @@ class QRange extends Component {
 
   getAnswerRange(value) {
     if(value === 1) {
-      this.setState({renge: 'grave'}, () => {
+      this.setState({range:'grave'}, () => {
         this.props.getRange(this.state.range);
       });
     } if(value === 2) {
@@ -28,19 +28,21 @@ class QRange extends Component {
 
   render() {
     return(
-      <div className="full-page-white">
-        <FormTwo 
-          range
-          getAnswerRange= {this.getAnswerRange}
-          label='Você acha sua voz?' 
-          input1='Grave' 
-          input2='Aguda' 
-          option1='/low' 
-          option2='/high'
-        />
-        <div className='legend-block-white'>
-          <img className="legend-white" src={legend5} alt="progress"/>
-        </div>
+      <div>
+        <div className="full-page-white">
+          <FormTwo 
+            range
+            getAnswerRange= {this.getAnswerRange}
+            label='Você acha sua voz?' 
+            input1='Grave' 
+            input2='Aguda' 
+            option1='/low' 
+            option2='/high'
+          />
+          <div className='legend-block-white'>
+            <img className="legend-white" src={legend5} alt="progress"/>
+          </div>
+      </div>
         <Footer /> 
       </div>
     )

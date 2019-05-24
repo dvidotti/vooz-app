@@ -1,4 +1,6 @@
 
+  @media (max-width: 768px){
+  
   .question{
     border: 1.5px solid black;
     margin-left:5%;
@@ -57,72 +59,70 @@
     background-color: black;
     color: white;
   }
+}
 
 
-
-
-
-
+/* /////// DESKTOP ////////// */
 
 
 @media (min-width: 768px){
 
-.question{
-  border: 1.5px solid black;
-  margin-left:25%;
-  margin-right:25%;
-  margin-top:3%; 
-  padding-top:4%;
-  padding-bottom:4%;
-  font-weight: 100;
-  font-size: 1.7em;
-}
+  .question{
+    border: 1.5px solid black;
+    margin-left:25%;
+    margin-right:25%;
+    margin-top:5%; 
+    padding-top:4%;
+    padding-bottom:4%;
+    font-weight: 100;
+    font-size: 1.7em;
+  }
 
-.answer1{
-  border: 1.5px solid black;
-  padding-top:2%;
-  padding-bottom:2%;
-  font-weight: 100;
-  font-size: 1.5em;
-  border: 1.5px solid black;
-  background-color:white;  
-  flex-grow: 1;
-}
+  .answer1{
+    border: 1.5px solid black;
+    padding-top:2%;
+    padding-bottom:2%;
+    font-weight: 100;
+    font-size: 1.5em;
+    border: 1.5px solid black;
+    background-color:white;  
+    flex-grow: 1;
+  }
 
-.answer1:hover{
-  background-color: black;
-  color:white;
-}
+  .answer1:hover{
+    background-color: black;
+    color:white;
+  }
 
-.answer2:hover{
-  background-color: black;
-  color:white;
-}
+  .answer2:hover{
+    background-color: black;
+    color:white;
+  }
 
-.answer2{
-  border: 1.5px solid black;
-  padding-top:7%;
-  padding-bottom:7%;
-  font-weight: 100;
-  font-size: 1.5em;
-  border: 1.5px solid black;
-  border-left:none;
-  background-color:white;  
-  flex-grow: 1;
-}
+  .answer2{
+    border: 1.5px solid black;
+    padding-top:7%;
+    padding-bottom:7%;
+    font-weight: 100;
+    font-size: 1.5em;
+    border: 1.5px solid black;
+    border-left:none;
+    background-color:white;  
+    flex-grow: 1;
+  }
 
-.answer-box{
-  display:flex; 
-  margin:1% 25%
-}
+  .answer-box{
+    display:flex; 
+    margin:1% 25%
+  }
 
-.full-page {
-  width: 70vh;
-  height: 100vh;
-  align-items: center;
-  margin: 0 auto;
-  background-color: black;
-  color: white;
-}
+  .full-page {
+    width: 70vh;
+    height: 100vh;
+    align-items: center;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+  }
 
 }

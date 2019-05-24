@@ -28,18 +28,20 @@ class QIntensity extends Component {
 
     render() {
       return(
-        <div className="full-page-white">
-          <FormTwo 
-            intensity
-            getAnswerIntensity= {this.getAnswerIntensity}
-            label='Você quando canta sai?' 
-            input1='Baixinho' 
-            input2='Vozeirão' 
-            option1='/qlight' 
-            option2='/qstrong'
-          />
-          <div className='legend-block-white'>
-            <img className="legend-white" src={legend6} alt="progress"/>
+        <div>
+          <div className="full-page-white">
+            <FormTwo 
+              intensity
+              getAnswerIntensity= {this.getAnswerIntensity}
+              label='Você quando canta sai?' 
+              input1='Baixinho' 
+              input2='Vozeirão' 
+              option1='/qlight' 
+              option2='/qstrong'
+            />
+            <div className='legend-block-white'>
+              <img className="legend-white" src={legend6} alt="progress"/>
+            </div>
           </div>
           <Footer /> 
         </div>

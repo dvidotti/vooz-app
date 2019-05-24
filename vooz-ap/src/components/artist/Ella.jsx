@@ -52,7 +52,6 @@ class Ella extends Component {
               onFinishedPlaying={this.handleSongFinishedPlaying}
             />
           }
-          <NavBarTransparent  className='artist-navbar'/>
           <button onClick={this.getAudio} className='central-artist'>Ella Fitzgerald</button>
           <FooterTransparent className='artist-footer' />
         </div>

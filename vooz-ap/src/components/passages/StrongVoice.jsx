@@ -19,7 +19,7 @@ class StrongVoice extends Component {
   }
 
   componentDidMount() {
-    window.setTimeout(()=> {this.setState({rendered:true})}, 3000)
+    window.setTimeout(()=> {this.setState({rendered:true})}, 2000)
     this.getAudio();
   }
   
@@ -52,8 +52,6 @@ class StrongVoice extends Component {
               onFinishedPlaying={this.handleSongFinishedPlaying}
             />
           }
-          <NavBarTransparent  className='artist-navbar'/>
-          <FooterTransparent className='artist-footer' />
         </div>
       )
     }

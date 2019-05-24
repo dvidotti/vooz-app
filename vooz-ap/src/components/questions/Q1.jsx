@@ -16,10 +16,8 @@ class Q1 extends Component {
   getAnswer(value) {
     if(value === 1) {
       this.setState({level: 'iniciante'});
-    //  this.props.getLevel(this.state.level);
     } if(value === 2) {
       this.setState({level:'intermediário'});
-    //   this.props.getLevel(this.state.level);
     }
   }
 

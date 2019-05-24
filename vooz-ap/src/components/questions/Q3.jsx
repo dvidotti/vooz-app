@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import FormTwo from '../forms/form-two/FormTwo'
 import '../play/Play.css'
-import legend4 from '../../img/Legenda 4 Mobile.svg'
 import Footer from '../footer/Footer' 
-
-
+import legend4 from '../../img/Legenda 4 Mobile.svg'
 
 class Q3 extends Component {
   constructor(props){
@@ -29,17 +27,19 @@ class Q3 extends Component {
 
     render() {
       return(
-        <div className="full-page-white">
-          <FormTwo 
-            getAnswer={this.getAnswer} 
-            label='E agora como foi?' 
-            input1='Fácil' 
-            input2='Difícil' 
-            option1='/qRange' 
-            option2='/qRange'
-          />
-          <div className='legend-block-white'>
-            <img className="legend-white" src={legend4} alt="progress"/>
+        <div>
+          <div className="full-page-white">
+            <FormTwo 
+              getAnswer={this.getAnswer} 
+              label='E agora como foi?' 
+              input1='Fácil' 
+              input2='Difícil' 
+              option1='/qRange' 
+              option2='/qRange'
+            />
+            <div className='legend-block-white'>
+              <img className="legend-white" src={legend4} alt="progress"/>
+            </div>
           </div>
           <Footer /> 
         </div>

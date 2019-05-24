@@ -106,7 +106,7 @@ class FormFour extends Component {
           <button className='answer2-box-black '  onClick={this.statusSelect2}><p className="text-button-form">{this.props.input2}</p></button> 
         </div>
         <div className='answer-bottom-box-black '>
-          <button className='answer3-box-black '  onClick={this.statusSelect3}><p className="text-button-form">{this.props.input3}</p></button> 
+          <button className='answer3-box-black'  onClick={this.statusSelect3}><p className="text-button-form">{this.props.input3}</p></button> 
           <button className='answer4-box-black '  onClick={this.statusSelect4}><p className="text-button-form">{this.props.input4}</p></button> 
         </div>
       </div>

@@ -32,19 +32,21 @@ class QAir extends Component {
       console.log('PropsQ2', this.props)
       console.log('StateQ2', this.state )
       return(
-        <div className="full-page-white">
-          <FormTwo 
-            air
-            getAnswerAir= {this.getAnswerAir}
-            label='Falta ar?' 
-            input1='Sim, às vezes !' 
-            input2='Não, raramente' 
-            option1='/breath' 
-            option2='/breath'
-          />
-          <div className='legend-block-white'>
-            <img className="legend-white" src={legend7} alt="progress"/>
-          </div>
+        <div>
+          <div className="full-page-white">
+            <FormTwo 
+              air
+              getAnswerAir= {this.getAnswerAir}
+              label='Falta ar?' 
+              input1='Sim, às vezes !' 
+              input2='Não, raramente' 
+              option1='/breath' 
+              option2='/breath'
+            />
+            <div className='legend-block-white'>
+              <img className="legend-white" src={legend7} alt="progress"/>
+            </div>
+        </div>
           <Footer /> 
         </div>
       )

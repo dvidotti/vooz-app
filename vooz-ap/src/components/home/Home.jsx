@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import NavBar from '../navbar/NavBar'
-import logo from '../../img/Logo Grande Mobile.svg'
+import logo from '../../img/Logo_animado_3s.gif'
 import './Home.css'
 import { Redirect } from 'react-router-dom'
 
@@ -29,8 +29,9 @@ class Home extends Component {
     return (
       <div className="full-page-white">
         <NavBar />
-        {/* <button onClick={() => this.handler()}>ClickMe</button> */}
-        <img className="logo" src={logo} alt="vooz" />
+        <div class="logo-home">
+          <img className="logo" src={logo} alt="vooz" />
+        </div>
         <h1 className="slogan">Descubra a sua voz</h1>
     <button onClick={this.redirect} className="btn-home">Faça o teste</button>
       </div>
