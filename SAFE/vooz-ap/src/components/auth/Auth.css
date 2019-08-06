@@ -1,0 +1,164 @@
+/* ////// MOBILE //////// */
+
+.full-signup-page{
+  background: black;
+  color: white;
+  height:100vh;
+  width: 100%;
+}
+
+
+.form{  
+ padding: 0% 5%;
+ height: 60vh;
+ border: 1px solid black;
+ margin:auto;
+}
+
+.form-label{
+  display:block;
+  text-align: left; 
+  width: 100%;
+  margin-top: 7%;
+  margin-left: 4%;
+  font-size: 1em;
+  padding:1%;
+}
+
+.title{
+  display:block;
+  width: 70%;
+  margin: auto;
+  font-size: 1.5em;
+  padding-top: 8%;
+  font-weight: 100;
+  color:white;
+}
+
+.subtitle{
+  display:block;
+  width: 70%;
+  margin: auto;
+  font-size: 1.2em;
+  padding-top:1%;
+  font-weight: 100;
+  color:white;
+}
+
+.form-input{
+  display:block;
+  border: .5px solid white;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  height: 6vh;
+  font-size: 1.2em;
+  padding-top:2%;
+  background-color: black;
+  color:white;  
+}
+
+
+.form-buttom{
+  display:block;
+  border: 1px solid white;
+  width: 40%;
+  margin-top: 8%;
+  height: 6vh;
+  font-size: 1em;
+  padding:3%;
+  background-color: white;
+  color:black;  
+}
+
+.line {
+  border-bottom:1px solid white;
+  width:90%;
+  margin: auto;
+  padding-bottom:7%;
+}
+
+
+/* ////// DESKTOP /////// */
+
+@media (min-width: 768px){
+
+  .form{  
+    padding: 0% 5%;
+    height: 60vh;
+    border: 1px solid black;
+    margin:auto;
+    width: 40%;
+   }
+
+   .line {
+    border-bottom:1px solid white;
+    width:40%;
+    margin: auto;
+    padding-bottom:0%;
+  }
+
+  .title{
+    display:block;
+    width: 70%;
+    text-align: center;
+    font-size: 1.8em;
+    padding-top: 3%;
+    font-weight: 100;
+    color:white;
+  }
+
+  .subtitle{
+    display:block;
+    width: 70%;
+    text-align: center;
+    font-size: 1.2em;
+    padding-top:1%;
+    font-weight: 100;
+    color:white;
+  }
+
+  .form-input{
+    display:block;
+    border: .5px solid white;
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 3%;
+    height: 5vh;
+    font-size: 1.2em;
+    padding-top:2%;
+    background-color: black;
+    color:white;  
+  }
+  
+  .form-buttom{
+    display:block;
+    border: 1px solid white;
+    width: 40%;
+    margin-top: 8%;
+    height: 6vh;
+    font-size: 1em;
+    padding:3%;
+    background-color: white;
+    color:black;  
+    font-size:1.3em;
+  }
+
+  .form-label{
+    display:block;
+    text-align: left; 
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 4%;
+    font-size: 1em;
+    padding:1%;
+  }
+
+  .conditional {
+    display: block;
+    margin-bottom: 4%;
+  }
+  .sign-up-link{
+    text-align: center;
+  }
+}
