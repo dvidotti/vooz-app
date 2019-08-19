@@ -3,16 +3,37 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const myVoiceSchema = new Schema({
-  level: String,
-  range: String,
-  intensity: String,
-  air: String,
-  style: String,
+  level: {
+    type: String,
+    required: true
+  },
+  range: {
+    type: String,
+    required: true
+  },
+  intensity: {
+    type: String,
+    required: true
+  },
+  air: {
+    type: String,
+    required: true
+  },
+  style: {
+    type: String,
+    required: true
+  },
   record: String,
-  artist: String,
-  wishes: String,
+  artist: {
+    type: String,
+    required: true
+  },
+  wishes: {
+    type: String,
+    required: true
+  },
   email: String,
-  name: String,
+  name:  String,
   username: String,
   password: String,
 });

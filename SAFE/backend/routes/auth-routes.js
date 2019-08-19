@@ -94,7 +94,7 @@ authRoutes.post('/signup', (req, res, next) => {
 
     aNewVoice.save((err) => {
       if (err) {
-        res.status(400).json({ message: 'Saving user to database went wrong.' });
+        res.status(400).json({ message: 'Clique no link do VoOZ abaixo e faça o teste para se cadastrar ;-).' });
         return;
       }
       
