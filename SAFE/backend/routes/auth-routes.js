@@ -16,7 +16,6 @@ authRoutes.post('/logout', (req, res, next) => {
 
 authRoutes.get('/loggedin', (req, res, next) => {
   if (req.isAuthenticated()) {
-    console.log('caiu no true do loggedin', req.user)
     res.status(200).json(req.user);
     return;
   }
